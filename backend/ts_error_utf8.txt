@@ -1,0 +1,14 @@
+﻿src/adapters/inbound/http/banking.controller.ts(3,29): error TS2307: Cannot find module '../../../../core/application/BankSurplus' or its corresponding type declarations.
+src/adapters/inbound/http/banking.controller.ts(4,29): error TS2307: Cannot find module '../../../../core/application/ApplyBanked' or its corresponding type declarations.
+src/adapters/inbound/http/compliance.controller.ts(3,42): error TS2307: Cannot find module '../../../../core/application/ComputeCB' or its corresponding type declarations.
+src/adapters/inbound/http/pools.controller.ts(3,28): error TS2307: Cannot find module '../../../../core/application/CreatePool' or its corresponding type declarations.
+src/adapters/inbound/http/pools.controller.ts(39,44): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/adapters/inbound/http/routes.controller.ts(3,31): error TS2307: Cannot find module '../../../../core/application/CompareRoutes' or its corresponding type declarations.
+src/adapters/inbound/http/routes.controller.ts(12,27): error TS6133: 'req' is declared but its value is never read.
+src/adapters/inbound/http/routes.controller.ts(44,31): error TS6133: 'req' is declared but its value is never read.
+src/infrastructure/server/app.ts(1,28): error TS6133: 'Request' is declared but its value is never read.
+src/infrastructure/server/app.ts(1,37): error TS6133: 'Response' is declared but its value is never read.
+src/infrastructure/server/app.ts(1,47): error TS6133: 'NextFunction' is declared but its value is never read.
+src/infrastructure/server/app.ts(5,14): error TS2323: Cannot redeclare exported variable 'app'.
+src/infrastructure/server/app.ts(22,10): error TS2323: Cannot redeclare exported variable 'app'.
+src/infrastructure/server/app.ts(22,10): error TS2484: Export declaration conflicts with exported declaration of 'app'.
