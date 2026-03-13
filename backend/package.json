@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node dist/infrastructure/server/server.js",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts",
     "db:migrate": "ts-node src/infrastructure/db/runMigrations.ts",
     "db:seed": "ts-node src/infrastructure/db/runSeeds.ts"

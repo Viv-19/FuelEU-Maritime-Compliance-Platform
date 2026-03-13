@@ -28,4 +28,20 @@ describe('CompareRoutes', () => {
     const expectedDiff = ((95.0 / 91.0) - 1) * 100;
     expect(result.percentDiff).toBeCloseTo(expectedDiff, 5);
   });
+
+  it('should return compliant=true when comparison equals exactly the target intensity', () => {
+    const result = compareRoutes(91.0, 89.3368);
+    expect(result.compliant).toBe(true);
+  });
+
+  it('should return compliant=false when comparison is just above the target', () => {
+    const result = compareRoutes(91.0, 89.34);
+    expect(result.compliant).toBe(false);
+  });
+
+  it('should return zero percentDiff when baseline and comparison are equal', () => {
+    const result = compareRoutes(88.0, 88.0);
+    expect(result.percentDiff).toBeCloseTo(0, 5);
+    expect(result.compliant).toBe(true);
+  });
 });

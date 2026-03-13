@@ -27,4 +27,16 @@ describe('BankSurplus', () => {
       bankSurplus(currentCB, bankedAmount);
     }).toThrow('Only positive Compliance Balance (surplus) can be banked');
   });
+
+  it('should bank when bankedAmount starts at zero', () => {
+    const result = bankSurplus(3000, 0);
+    expect(result).toBe(3000);
+  });
+
+  it('should accumulate correctly across multiple bankings', () => {
+    let banked = bankSurplus(1000, 0);
+    banked = bankSurplus(2000, banked);
+    banked = bankSurplus(500, banked);
+    expect(banked).toBe(3500);
+  });
 });

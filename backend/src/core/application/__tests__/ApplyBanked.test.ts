@@ -40,4 +40,18 @@ describe('ApplyBanked', () => {
       applyBanked(deficitCB, bankedAmount);
     }).toThrow('Deficit CB must be negative to apply banked compliance');
   });
+
+  it('should apply exact amount when banked equals deficit magnitude', () => {
+    const result = applyBanked(-3000, 3000);
+    expect(result.applied).toBe(3000);
+    expect(result.newCB).toBe(0);
+    expect(result.remainingBank).toBe(0);
+  });
+
+  it('should apply zero when banked amount is zero', () => {
+    const result = applyBanked(-5000, 0);
+    expect(result.applied).toBe(0);
+    expect(result.newCB).toBe(-5000);
+    expect(result.remainingBank).toBe(0);
+  });
 });
