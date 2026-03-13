@@ -42,6 +42,6 @@ describe('TabLayout Navigation', () => {
     fireEvent.click(compareTab);
 
     // Should now render ComparePage
-    expect(screen.getByText('Compare Intensities')).toBeInTheDocument();
+    expect(screen.getByText('Compare Routes')).toBeInTheDocument();
   });
 });
