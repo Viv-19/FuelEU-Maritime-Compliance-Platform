@@ -1,22 +1,16 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+const API_BASE_URL = "http://localhost:3000";
 
-export async function apiGet<T>(url: string): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}${url}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-
+export async function apiGet(path: string) {
+  const response = await fetch(`${API_BASE_URL}${path}`);
   if (!response.ok) {
-    throw new Error(`API error: ${response.status} ${response.statusText}`);
+    const errorData = await response.json().catch(() => null);
+    throw new Error(errorData?.error || `HTTP error! status: ${response.status}`);
   }
-
-  return response.json() as Promise<T>;
+  return response.json();
 }
 
-export async function apiPost<T>(url: string, body: unknown): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}${url}`, {
+export async function apiPost(path: string, body: unknown) {
+  const response = await fetch(`${API_BASE_URL}${path}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -25,8 +19,8 @@ export async function apiPost<T>(url: string, body: unknown): Promise<T> {
   });
 
   if (!response.ok) {
-    throw new Error(`API error: ${response.status} ${response.statusText}`);
+    const errorData = await response.json().catch(() => null);
+    throw new Error(errorData?.error || `HTTP error! status: ${response.status}`);
   }
-
-  return response.json() as Promise<T>;
+  return response.json();
 }
