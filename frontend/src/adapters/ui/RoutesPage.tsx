@@ -6,6 +6,25 @@ import { RoutesTable } from './RoutesTable';
 import { AddRouteModal } from './AddRouteModal';
 import { RouteDetailsDrawer } from './RouteDetailsDrawer';
 
+const TARGET_INTENSITY = 89.3368;
+
+interface KpiCardProps {
+  icon: string;
+  title: string;
+  value: string | number;
+  accent?: string;
+}
+
+const KpiCard: React.FC<KpiCardProps> = ({ icon, title, value, accent = 'text-gray-900' }) => (
+  <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md">
+    <div className="text-2xl">{icon}</div>
+    <div>
+      <p className="text-sm text-gray-500 font-medium">{title}</p>
+      <p className={`text-2xl font-semibold ${accent} mt-0.5`}>{value}</p>
+    </div>
+  </div>
+);
+
 export const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -65,7 +84,7 @@ export const RoutesPage: React.FC = () => {
       if (res.success && Array.isArray(res.data)) {
         setRoutes(res.data);
       } else {
-        await fetchRoutes(); // Fallback: refresh the full list
+        await fetchRoutes();
       }
     } catch (err: any) {
       setError(err.message || 'Failed to set baseline.');
@@ -104,6 +123,14 @@ export const RoutesPage: React.FC = () => {
     });
   }, [routes, debouncedQuery, selectedVessel, selectedFuel, selectedYear]);
 
+  // KPI calculations
+  const surplusCount = useMemo(() => routes.filter(r => r.ghgIntensity <= TARGET_INTENSITY).length, [routes]);
+  const deficitCount = useMemo(() => routes.filter(r => r.ghgIntensity > TARGET_INTENSITY).length, [routes]);
+  const avgGhg = useMemo(() => {
+    if (routes.length === 0) return '—';
+    return (routes.reduce((sum, r) => sum + r.ghgIntensity, 0) / routes.length).toFixed(2);
+  }, [routes]);
+
   const handleExportCSV = useCallback(() => {
     const headers = ['routeId', 'vesselType', 'fuelType', 'year', 'ghgIntensity', 'fuelConsumption', 'distance', 'totalEmissions'];
     const csvRows = [
@@ -130,13 +157,17 @@ export const RoutesPage: React.FC = () => {
   }, [filteredRoutes]);
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-900">Routes Dashboard</h2>
-        <div className="flex items-center gap-4">
+    <div className="flex flex-col gap-6">
+      {/* Page Header + Actions */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h2 className="text-2xl font-semibold text-gray-900">Routes Dashboard</h2>
+          <p className="text-sm text-gray-500 mt-1">Monitor and manage your maritime route compliance data.</p>
+        </div>
+        <div className="flex items-center gap-3">
           <button
             onClick={fetchRoutes}
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-800"
+            className="text-sm font-medium text-blue-600 hover:text-blue-800 transition-all duration-150"
             disabled={loading}
           >
             {loading ? 'Refreshing...' : 'Refresh Data'}
@@ -144,7 +175,7 @@ export const RoutesPage: React.FC = () => {
           <button
             onClick={handleExportCSV}
             disabled={filteredRoutes.length === 0}
-            className="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+            className="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 transition-all duration-150"
           >
             <svg className="h-4 w-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -153,41 +184,53 @@ export const RoutesPage: React.FC = () => {
           </button>
           <button
             onClick={() => setIsAddModalOpen(true)}
-            className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-all duration-150"
           >
+            <svg className="h-4 w-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
             Add Route
           </button>
         </div>
       </div>
 
+      {/* Toast */}
       {toastMessage && (
-        <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-md z-50">
+        <div className="fixed top-4 right-4 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50 text-sm font-medium transition-all duration-150">
           {toastMessage}
         </div>
       )}
 
+      {/* Error */}
       {error && (
-        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="ml-3 flex flex-col items-start gap-2">
-              <p className="text-sm text-red-700">{error}</p>
-              <button
-                onClick={fetchRoutes}
-                className="text-xs font-medium text-red-700 hover:text-red-800 underline border-none bg-transparent cursor-pointer p-0"
-                disabled={loading}
-              >
-                Retry
-              </button>
-            </div>
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+          <div className="flex items-center gap-3">
+            <svg className="h-5 w-5 text-red-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+            </svg>
+            <p className="text-sm text-red-700 font-medium">{error}</p>
+            <button
+              onClick={fetchRoutes}
+              className="ml-auto text-sm font-medium text-red-600 hover:text-red-800 underline transition-all duration-150"
+              disabled={loading}
+            >
+              Retry
+            </button>
           </div>
         </div>
       )}
 
+      {/* KPI Cards */}
+      {!loading && routes.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <KpiCard icon="🚢" title="Total Routes" value={routes.length} />
+          <KpiCard icon="📈" title="Surplus Ships" value={surplusCount} accent="text-green-700" />
+          <KpiCard icon="⚠️" title="Deficit Ships" value={deficitCount} accent="text-red-700" />
+          <KpiCard icon="🌍" title="Avg GHG Intensity" value={avgGhg} accent="text-blue-700" />
+        </div>
+      )}
+
+      {/* Filters */}
       {routes.length > 0 && (
         <RouteFilters
           searchQuery={searchQuery}
@@ -203,6 +246,7 @@ export const RoutesPage: React.FC = () => {
         />
       )}
 
+      {/* Table */}
       <RoutesTable
         routes={filteredRoutes}
         onSetBaseline={handleSetBaseline}

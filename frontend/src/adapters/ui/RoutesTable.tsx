@@ -56,13 +56,13 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
       if (typeof aValue === 'number' && typeof bValue === 'number') {
         return sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
       }
-      return 0; // Fallback, though we only sort numbers here
+      return 0;
     });
   }, [routes, sortColumn, sortDirection]);
 
   const renderSortIndicator = (column: keyof Route | 'complianceBalance') => {
-    if (sortColumn !== column) return null;
-    return <span className="ml-1 text-xs">{sortDirection === 'asc' ? '▲' : '▼'}</span>;
+    if (sortColumn !== column) return <span className="ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity">↕</span>;
+    return <span className="ml-1 text-xs text-blue-600">{sortDirection === 'asc' ? '▲' : '▼'}</span>;
   };
 
   const ITEMS_PER_PAGE = 10;
@@ -70,54 +70,61 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedRoutes = sortedRoutes.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
+  const thRightClass = "px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none";
+
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden border border-gray-200">
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200 text-sm">
-          <thead className="bg-gray-50 text-gray-500 uppercase text-xs">
+          <thead className="bg-gray-50">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left font-semibold tracking-wider">Route ID</th>
-              <th scope="col" className="px-6 py-3 text-left font-semibold tracking-wider">Vessel Type</th>
-              <th scope="col" className="px-6 py-3 text-left font-semibold tracking-wider">Fuel Type</th>
-              <th scope="col" className="px-6 py-3 text-left font-semibold tracking-wider">Year</th>
-              <th scope="col" className="px-6 py-3 text-right font-semibold tracking-wider cursor-pointer hover:bg-gray-100 transition-colors" onClick={() => handleSort('ghgIntensity')}>
+              <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Route ID</th>
+              <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Vessel Type</th>
+              <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Fuel Type</th>
+              <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Year</th>
+              <th scope="col" className={thRightClass} onClick={() => handleSort('ghgIntensity')}>
                 GHG Intensity {renderSortIndicator('ghgIntensity')}
               </th>
-              <th scope="col" className="px-6 py-3 text-right font-semibold tracking-wider cursor-pointer hover:bg-gray-100 transition-colors" onClick={() => handleSort('fuelConsumption')}>
+              <th scope="col" className={thRightClass} onClick={() => handleSort('fuelConsumption')}>
                 Fuel Cons. (t) {renderSortIndicator('fuelConsumption')}
               </th>
-              <th scope="col" className="px-6 py-3 text-right font-semibold tracking-wider cursor-pointer hover:bg-gray-100 transition-colors" onClick={() => handleSort('distance')}>
+              <th scope="col" className={thRightClass} onClick={() => handleSort('distance')}>
                 Distance (nm) {renderSortIndicator('distance')}
               </th>
-              <th scope="col" className="px-6 py-3 text-right font-semibold tracking-wider cursor-pointer hover:bg-gray-100 transition-colors" onClick={() => handleSort('totalEmissions')}>
-                Emissions (tCO2e) {renderSortIndicator('totalEmissions')}
+              <th scope="col" className={thRightClass} onClick={() => handleSort('totalEmissions')}>
+                Emissions (tCO₂e) {renderSortIndicator('totalEmissions')}
               </th>
-              <th scope="col" className="px-6 py-3 text-right font-semibold tracking-wider cursor-pointer hover:bg-gray-100 transition-colors" onClick={() => handleSort('complianceBalance')}>
-                Compliance Balance (CB) {renderSortIndicator('complianceBalance')}
+              <th scope="col" className={thRightClass} onClick={() => handleSort('complianceBalance')}>
+                Compliance Balance {renderSortIndicator('complianceBalance')}
               </th>
-              <th scope="col" className="px-6 py-3 text-center font-semibold tracking-wider">Action</th>
+              <th scope="col" className="px-4 py-3.5 text-center text-xs uppercase tracking-wider font-semibold text-gray-600">Action</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-white divide-y divide-gray-100">
             {loading ? (
               Array.from({ length: 5 }).map((_, idx) => (
                 <tr key={`skeleton-${idx}`}>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-16"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12 ml-auto"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20 ml-auto"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-28 ml-auto"></div></td>
-                  <td className="px-6 py-4 whitespace-nowrap text-center"><div className="h-8 bg-gray-200 rounded animate-pulse w-24 mx-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-16"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12 ml-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20 ml-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-28 ml-auto"></div></td>
+                  <td className="px-4 py-4 whitespace-nowrap text-center"><div className="h-7 bg-gray-200 rounded animate-pulse w-24 mx-auto"></div></td>
                 </tr>
               ))
             ) : paginatedRoutes.length === 0 ? (
               <tr>
-                <td colSpan={10} className="px-6 py-8 text-center text-gray-500">
-                  No routes found matching the current filters.
+                <td colSpan={10} className="px-4 py-12 text-center text-gray-500">
+                  <div className="flex flex-col items-center gap-2">
+                    <svg className="h-8 w-8 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                    <span className="text-sm">No routes found matching the current filters.</span>
+                  </div>
                 </td>
               </tr>
             ) : (
@@ -127,36 +134,38 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
                 
                 const bgClass = route.isBaseline 
                   ? 'bg-blue-50 border-l-4 border-blue-400' 
-                  : (route.ghgIntensity <= TARGET_INTENSITY ? 'bg-green-50' : 'bg-red-50');
+                  : (route.ghgIntensity <= TARGET_INTENSITY ? 'bg-green-50/50' : 'bg-red-50/50');
 
                 return (
                   <tr 
                     key={route.routeId} 
-                    className={`hover:bg-gray-100 ${bgClass} ${onRowClick ? 'cursor-pointer' : ''}`}
+                    className={`hover:bg-blue-50 ${bgClass} ${onRowClick ? 'cursor-pointer' : ''} transition-all duration-150`}
                     onClick={() => onRowClick && onRowClick(route)}
                   >
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{route.routeId}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">{route.vesselType}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">{route.fuelType}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">{route.year}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-gray-700 font-mono">{route.ghgIntensity.toFixed(2)}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-gray-700 font-mono">{route.fuelConsumption.toLocaleString()}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-gray-700 font-mono">{route.distance.toLocaleString()}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-gray-700 font-mono">{route.totalEmissions.toLocaleString()}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right font-mono">
+                  <td className="px-4 py-4 whitespace-nowrap font-medium text-gray-900">{route.routeId}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.vesselType}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.fuelType}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.year}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-right text-gray-700 font-mono text-sm">{route.ghgIntensity.toFixed(2)}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-right text-gray-700 font-mono text-sm">{route.fuelConsumption.toLocaleString()}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-right text-gray-700 font-mono text-sm">{route.distance.toLocaleString()}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-right text-gray-700 font-mono text-sm">{route.totalEmissions.toLocaleString()}</td>
+                  <td className="px-4 py-4 whitespace-nowrap text-right">
                     {complianceBalance > 0 ? (
-                      <span className="text-sm font-medium text-green-700">
-                        {complianceBalance.toLocaleString(undefined, { maximumFractionDigits: 0 })} <span className="text-xs ml-1">(Surplus)</span>
+                      <span className="inline-flex items-center gap-1.5 bg-green-100 text-green-700 rounded-md px-2.5 py-1 text-xs font-medium">
+                        +{complianceBalance.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                        <span className="font-semibold">SURPLUS</span>
                       </span>
                     ) : complianceBalance < 0 ? (
-                      <span className="text-sm font-medium text-red-700">
-                        {complianceBalance.toLocaleString(undefined, { maximumFractionDigits: 0 })} <span className="text-xs ml-1">(Deficit)</span>
+                      <span className="inline-flex items-center gap-1.5 bg-red-100 text-red-700 rounded-md px-2.5 py-1 text-xs font-medium">
+                        {complianceBalance.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                        <span className="font-semibold">DEFICIT</span>
                       </span>
                     ) : (
-                      <span className="text-sm font-medium text-gray-700">0</span>
+                      <span className="inline-flex items-center bg-gray-100 text-gray-600 rounded-md px-2.5 py-1 text-xs font-medium">0</span>
                     )}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <td className="px-4 py-4 whitespace-nowrap text-center">
                     <BaselineButton
                       routeId={route.routeId}
                       isBaseline={route.isBaseline}
@@ -171,64 +180,41 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
         </table>
       </div>
       
+      {/* Pagination */}
       {sortedRoutes.length > 0 && (
-        <div className="bg-white px-4 py-3 border-t border-gray-200 flex items-center justify-between sm:px-6">
-          <div className="flex-1 flex justify-between sm:hidden">
+        <div className="bg-white px-4 py-3 border-t border-gray-200 flex items-center justify-between">
+          <p className="text-sm text-gray-600">
+            Showing <span className="font-medium">{startIndex + 1}</span> to <span className="font-medium">{Math.min(startIndex + ITEMS_PER_PAGE, sortedRoutes.length)}</span> of <span className="font-medium">{sortedRoutes.length}</span> routes
+          </p>
+          <nav className="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
             <button
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+              className="relative inline-flex items-center px-3 py-1.5 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-40 transition-all duration-150"
             >
               Previous
             </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`relative inline-flex items-center px-3.5 py-1.5 border text-sm font-medium transition-all duration-150 ${
+                  currentPage === page
+                    ? 'z-10 bg-blue-600 border-blue-600 text-white'
+                    : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
             <button
               onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+              className="relative inline-flex items-center px-3 py-1.5 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-40 transition-all duration-150"
             >
               Next
             </button>
-          </div>
-          <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm text-gray-700">
-                Showing <span className="font-medium">{startIndex + 1}</span> to <span className="font-medium">{Math.min(startIndex + ITEMS_PER_PAGE, sortedRoutes.length)}</span> of <span className="font-medium">{sortedRoutes.length}</span> results
-              </p>
-            </div>
-            <div>
-              <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                <button
-                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                  className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
-                >
-                  <span className="sr-only">Previous</span>
-                  Previous
-                </button>
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => setCurrentPage(page)}
-                    className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
-                      currentPage === page
-                        ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'
-                        : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
-                <button
-                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  disabled={currentPage === totalPages}
-                  className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
-                >
-                  <span className="sr-only">Next</span>
-                  Next
-                </button>
-              </nav>
-            </div>
-          </div>
+          </nav>
         </div>
       )}
     </div>

@@ -35,16 +35,16 @@ describe('RoutesTable', () => {
 
     // Check headers
     expect(screen.getByText('Route ID')).toBeInTheDocument();
-    expect(screen.getByText('Compliance Balance (CB)')).toBeInTheDocument();
+    expect(screen.getByText('Compliance Balance')).toBeInTheDocument();
     
     // Check Content rows
     expect(screen.getByText('R001')).toBeInTheDocument();
     expect(screen.getByText('R002')).toBeInTheDocument();
     
     // (89.3368 - 91.0) * (5000 * 41000) = deficit
-    expect(screen.getByText('(Deficit)')).toBeInTheDocument();
+    expect(screen.getByText('DEFICIT')).toBeInTheDocument();
     // (89.3368 - 88.0) * (3000 * 41000) = surplus
-    expect(screen.getByText('(Surplus)')).toBeInTheDocument();
+    expect(screen.getByText('SURPLUS')).toBeInTheDocument();
   });
 
   it('renders Baseline badge for baseline route and Set as Baseline button for others', () => {

@@ -9,7 +9,7 @@ interface BaselineButtonProps {
 export const BaselineButton: React.FC<BaselineButtonProps> = ({ routeId, isBaseline, onSetBaseline }) => {
   if (isBaseline) {
     return (
-      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-medium">
+      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs font-medium">
         Baseline
       </span>
     );

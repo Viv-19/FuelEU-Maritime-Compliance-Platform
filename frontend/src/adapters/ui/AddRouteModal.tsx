@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { apiPost } from '../infrastructure/apiClient';
 
 interface AddRouteModalProps {
@@ -29,7 +29,40 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
   const [error, setError] = useState<string | null>(null);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
-  if (!isOpen) return null;
+  // Reset state when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      setFormData({
+        routeId: '',
+        vesselType: 'Container',
+        fuelType: 'HFO',
+        year: new Date().getFullYear(),
+        ghgIntensity: '',
+        fuelConsumption: '',
+        distance: ''
+      });
+      setError(null);
+      setTouched({});
+    }
+  }, [isOpen]);
+
+  // Esc key and body scroll lock
+  useEffect(() => {
+    if (!isOpen) return;
+
+    document.body.style.overflow = "hidden";
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [isOpen, onClose]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -113,7 +146,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     }
   };
 
-  const inputBaseClass = "mt-1 block w-full outline-none border rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm";
+  const inputBaseClass = "mt-1 block w-full outline-none border rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-all duration-150";
   const inputErrorClass = "border-red-300 text-red-900 focus:ring-red-500 focus:border-red-500";
   const inputNormalClass = "border-gray-300";
 
@@ -121,18 +154,27 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     return `${inputBaseClass} ${touched[fieldName] && fieldErrors[fieldName] ? inputErrorClass : inputNormalClass}`;
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-md p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-4">Add New Route</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Background overlay */}
+      <div
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity"
+        onClick={onClose}
+      />
+
+      {/* Modal content */}
+      <div className="relative bg-white rounded-lg shadow-xl border border-gray-200 w-full max-w-lg p-6 z-50 transform transition-all">
+        <h2 className="text-xl font-bold text-gray-900 mb-5">Add New Route</h2>
         
         {error && (
-          <div className="mb-4 bg-red-50 text-red-700 p-3 rounded text-sm">
+          <div className="mb-5 bg-red-50 border border-red-200 text-red-700 font-medium px-4 py-3 rounded-lg text-sm">
             {error}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-700">Route ID</label>
             <input
@@ -145,11 +187,11 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
               placeholder="e.g. R006"
             />
             {touched.routeId && fieldErrors.routeId && (
-              <p className="mt-1 text-xs text-red-600">{fieldErrors.routeId}</p>
+              <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.routeId}</p>
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700">Vessel Type</label>
               <select
@@ -180,7 +222,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700">Year</label>
               <input
@@ -204,12 +246,12 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 className={getInputClass('ghgIntensity')}
               />
               {touched.ghgIntensity && fieldErrors.ghgIntensity && (
-                <p className="mt-1 text-xs text-red-600">{fieldErrors.ghgIntensity}</p>
+                <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.ghgIntensity}</p>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700">Fuel Cons. (tons)</label>
               <input
@@ -222,7 +264,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 className={getInputClass('fuelConsumption')}
               />
               {touched.fuelConsumption && fieldErrors.fuelConsumption && (
-                <p className="mt-1 text-xs text-red-600">{fieldErrors.fuelConsumption}</p>
+                <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.fuelConsumption}</p>
               )}
             </div>
             <div>
@@ -236,23 +278,23 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 className={getInputClass('distance')}
               />
               {touched.distance && fieldErrors.distance && (
-                <p className="mt-1 text-xs text-red-600">{fieldErrors.distance}</p>
+                <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.distance}</p>
               )}
             </div>
           </div>
 
-          <div className="mt-6 flex justify-end gap-3">
+          <div className="mt-8 flex justify-end gap-3 pt-2 border-t border-gray-100">
             <button
               type="button"
               onClick={onClose}
-              className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
               disabled={loading}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-blue-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               disabled={loading || !isFormValid}
             >
               {loading ? 'Adding...' : 'Add Route'}
