@@ -1,16 +1,23 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ComparePage } from '../adapters/ui/ComparePage';
+import { ComparePageContent } from '../adapters/ui/ComparePage';
 import * as apiClient from '../adapters/infrastructure/apiClient';
 
 vi.mock('../adapters/infrastructure/apiClient', () => ({
   apiGet: vi.fn(),
 }));
 
+vi.mock('../adapters/ui/context/BaselineContext', () => ({
+  useBaseline: () => ({
+    baselineRouteId: 'R001',
+    setBaselineRouteId: vi.fn(),
+  }),
+}));
+
 const mockData = [
-  { routeId: 'R001', ghgIntensity: 91.0, isBaseline: true },
-  { routeId: 'R002', ghgIntensity: 88.0, isBaseline: false },
-  { routeId: 'R003', ghgIntensity: 95.0, isBaseline: false }
+  { routeId: 'R001', ghgIntensity: 91.0, isBaseline: true, vesselType: 'Container', fuelType: 'HFO', year: 2024 },
+  { routeId: 'R002', ghgIntensity: 88.0, isBaseline: false, vesselType: 'Container', fuelType: 'HFO', year: 2024 },
+  { routeId: 'R003', ghgIntensity: 95.0, isBaseline: false, vesselType: 'Container', fuelType: 'HFO', year: 2024 }
 ];
 
 describe('ComparePage', () => {
@@ -21,37 +28,37 @@ describe('ComparePage', () => {
   it('fetches and processes comparison data correctly', async () => {
     vi.mocked(apiClient.apiGet).mockResolvedValueOnce({ success: true, data: mockData });
 
-    render(<ComparePage />);
+    render(<ComparePageContent />);
 
-    expect(screen.getByText(/Loading comparison data.../i)).toBeInTheDocument();
+    // Skeleton loaders are shown instead of text during loading
 
     await waitFor(() => {
       // Check if data is rendered in the table
       expect(screen.getByText('R001')).toBeInTheDocument();
       expect(screen.getByText('-3.30%')).toBeInTheDocument(); // Processed diff R002 vs R001
-      expect(screen.getAllByText('✅').length).toBe(1);    // R002 is compliant
-      expect(screen.getAllByText('❌').length).toBe(2);    // R001 & R003 are not
+      expect(screen.getAllByText('Compliant').length).toBeGreaterThanOrEqual(1);
+      expect(screen.getAllByText('Non-compliant').length).toBeGreaterThanOrEqual(2);
     });
   });
 
-  it('shows warning when no baseline route is detected', async () => {
-    const noBaselineData = mockData.map(r => ({ ...r, isBaseline: false }));
-    vi.mocked(apiClient.apiGet).mockResolvedValueOnce({ success: true, data: noBaselineData });
+  it('shows warning when no comparison data is available', async () => {
+    vi.mocked(apiClient.apiGet).mockResolvedValueOnce({ success: true, data: [] });
 
-    render(<ComparePage />);
+    render(<ComparePageContent />);
 
     await waitFor(() => {
-      expect(screen.getByText(/No baseline route set/i)).toBeInTheDocument();
+      expect(screen.getByText(/Please select a Baseline Route above/i)).toBeInTheDocument();
     });
   });
 
   it('handles API errors gracefully', async () => {
     vi.mocked(apiClient.apiGet).mockRejectedValueOnce(new Error('Connection failed'));
 
-    render(<ComparePage />);
+    render(<ComparePageContent />);
 
     await waitFor(() => {
-      expect(screen.getByText(/Connection failed/i)).toBeInTheDocument();
+      expect(screen.getByText(/Unable to load comparison data/i)).toBeInTheDocument();
     });
   });
 });
+

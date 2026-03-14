@@ -55,7 +55,13 @@ export const getComparison = async (_req: Request, res: Response): Promise<void>
     const routes = await getAllRoutesUseCase.execute();
     const data = routes.map((route: Route) => ({
       routeId: route.routeId,
+      vesselType: route.vesselType,
+      fuelType: route.fuelType,
+      year: route.year,
       ghgIntensity: route.ghgIntensity,
+      fuelConsumption: route.fuelConsumption,
+      distance: route.distance,
+      totalEmissions: route.totalEmissions,
       isBaseline: route.isBaseline,
     }));
 

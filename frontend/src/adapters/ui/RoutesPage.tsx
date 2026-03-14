@@ -42,7 +42,7 @@ export const RoutesPage: React.FC = () => {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedQuery(searchQuery);
-    }, 3000); // 300ms debounce for real time filtering
+    }, 300); // 300ms debounce for real time filtering
 
     return () => clearTimeout(handler);
   }, [searchQuery]);
@@ -56,8 +56,18 @@ export const RoutesPage: React.FC = () => {
     setTimeout(() => setToastMessage(null), 3000);
   };
 
+  const isMounted = React.useRef(true);
+
+  React.useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
   const fetchRoutes = async () => {
     try {
+      if (!isMounted.current) return;
       setLoading(true);
       setError(null);
       const res = await apiGet('/routes');
@@ -67,9 +77,12 @@ export const RoutesPage: React.FC = () => {
         throw new Error('Invalid response format');
       }
     } catch (err: any) {
+      if (!isMounted.current) return;
       setError('Failed to load routes');
     } finally {
-      setLoading(false);
+      if (isMounted.current) {
+        setLoading(false);
+      }
     }
   };
 

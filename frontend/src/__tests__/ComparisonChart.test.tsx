@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { ComparisonChart } from '../adapters/ui/ComparisonChart';
-import { RouteComparison } from '../core/domain/Route';
+import { TopDeviationChart, DeviationData } from '../adapters/ui/components/compare/TopDeviationChart';
 
 // Mock Recharts because SVG rendering check is hard in RTL/Vitest environment
 vi.mock('recharts', async () => {
@@ -12,15 +11,17 @@ vi.mock('recharts', async () => {
   };
 });
 
-const mockData: RouteComparison[] = [
-  { routeId: 'R001', ghgIntensity: 91, percentDiff: 0, compliant: false, isBaseline: true },
-  { routeId: 'R002', ghgIntensity: 88, percentDiff: -3.3, compliant: true, isBaseline: false }
+const mockData: DeviationData[] = [
+  { routeId: 'R001', percentDiff: 0 },
+  { routeId: 'R002', percentDiff: -3.3 },
+  { routeId: 'R003', percentDiff: 4.4 },
 ];
 
-describe('ComparisonChart', () => {
+describe('TopDeviationChart', () => {
   it('renders without crashing', () => {
-    const { container } = render(<ComparisonChart data={mockData} targetIntensity={89.3368} />);
+    const { container } = render(<TopDeviationChart data={mockData} />);
     expect(container).toBeInTheDocument();
-    expect(screen.getByText(/GHG Intensity Comparison/i)).toBeInTheDocument();
+    expect(screen.getByText(/Top Deviation Routes/i)).toBeInTheDocument();
   });
 });
+
