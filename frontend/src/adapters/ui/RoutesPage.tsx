@@ -11,9 +11,20 @@ export const RoutesPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Filter States
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [debouncedQuery, setDebouncedQuery] = useState<string>('');
   const [selectedVessel, setSelectedVessel] = useState<string>('');
   const [selectedFuel, setSelectedFuel] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<string>('');
+
+  // Debounce search query
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 3000); // 300ms debounce for real time filtering
+
+    return () => clearTimeout(handler);
+  }, [searchQuery]);
 
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -65,6 +76,8 @@ export const RoutesPage: React.FC = () => {
   };
 
   const handleResetFilters = () => {
+    setSearchQuery('');
+    setDebouncedQuery('');
     setSelectedVessel('');
     setSelectedFuel('');
     setSelectedYear('');
@@ -79,12 +92,13 @@ export const RoutesPage: React.FC = () => {
   // Apply filters linearly
   const filteredRoutes = useMemo(() => {
     return routes.filter(route => {
+      if (debouncedQuery && !route.routeId.toLowerCase().includes(debouncedQuery.toLowerCase())) return false;
       if (selectedVessel && route.vesselType !== selectedVessel) return false;
       if (selectedFuel && route.fuelType !== selectedFuel) return false;
       if (selectedYear && route.year.toString() !== selectedYear) return false;
       return true;
     });
-  }, [routes, selectedVessel, selectedFuel, selectedYear]);
+  }, [routes, debouncedQuery, selectedVessel, selectedFuel, selectedYear]);
 
   return (
     <div className="flex flex-col gap-4">
@@ -137,6 +151,8 @@ export const RoutesPage: React.FC = () => {
 
       {routes.length > 0 && (
         <RouteFilters
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
           vesselTypes={vesselTypes}
           fuelTypes={fuelTypes}
           years={years}
