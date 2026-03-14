@@ -16,6 +16,7 @@ export const RoutesPage: React.FC = () => {
   const [selectedVessel, setSelectedVessel] = useState<string>('');
   const [selectedFuel, setSelectedFuel] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<string>('');
+  const [resetSortTrigger, setResetSortTrigger] = useState<number>(0);
 
   // Debounce search query
   useEffect(() => {
@@ -81,6 +82,7 @@ export const RoutesPage: React.FC = () => {
     setSelectedVessel('');
     setSelectedFuel('');
     setSelectedYear('');
+    setResetSortTrigger((prev) => prev + 1);
     fetchRoutes();
   };
 
@@ -172,6 +174,7 @@ export const RoutesPage: React.FC = () => {
         <RoutesTable
           routes={filteredRoutes}
           onSetBaseline={handleSetBaseline}
+          resetSortTrigger={resetSortTrigger}
         />
       )}
 
