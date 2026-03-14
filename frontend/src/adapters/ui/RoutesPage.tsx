@@ -4,6 +4,7 @@ import { apiGet, apiPost } from '../infrastructure/apiClient';
 import { RouteFilters } from './RouteFilters';
 import { RoutesTable } from './RoutesTable';
 import { AddRouteModal } from './AddRouteModal';
+import { RouteDetailsDrawer } from './RouteDetailsDrawer';
 
 export const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
@@ -28,6 +29,7 @@ export const RoutesPage: React.FC = () => {
   }, [searchQuery]);
 
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [selectedRoute, setSelectedRoute] = useState<Route | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (message: string) => {
@@ -175,6 +177,7 @@ export const RoutesPage: React.FC = () => {
           routes={filteredRoutes}
           onSetBaseline={handleSetBaseline}
           resetSortTrigger={resetSortTrigger}
+          onRowClick={setSelectedRoute}
         />
       )}
 
@@ -183,6 +186,12 @@ export const RoutesPage: React.FC = () => {
         onClose={() => setIsAddModalOpen(false)}
         onSuccess={fetchRoutes}
         showToast={showToast}
+      />
+
+      <RouteDetailsDrawer
+        isOpen={!!selectedRoute}
+        onClose={() => setSelectedRoute(null)}
+        route={selectedRoute}
       />
     </div>
   );

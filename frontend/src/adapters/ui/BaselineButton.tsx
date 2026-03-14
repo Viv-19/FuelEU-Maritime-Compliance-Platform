@@ -9,7 +9,10 @@ interface BaselineButtonProps {
 export const BaselineButton: React.FC<BaselineButtonProps> = ({ routeId, isBaseline, onSetBaseline }) => {
   return (
     <button
-      onClick={() => onSetBaseline(routeId)}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSetBaseline(routeId);
+      }}
       disabled={isBaseline}
       className={`px-3 py-1 rounded text-sm font-medium transition-colors border shadow-sm ${
         isBaseline

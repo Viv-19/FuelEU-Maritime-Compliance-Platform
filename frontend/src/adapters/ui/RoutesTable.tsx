@@ -6,17 +6,24 @@ interface RoutesTableProps {
   routes: Route[];
   onSetBaseline: (routeId: string) => void;
   resetSortTrigger?: number;
+  onRowClick?: (route: Route) => void;
 }
 
-export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline, resetSortTrigger }) => {
+export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline, resetSortTrigger, onRowClick }) => {
   const TARGET_INTENSITY = 89.3368;
   const [sortColumn, setSortColumn] = useState<keyof Route | 'complianceBalance' | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     setSortColumn(null);
     setSortDirection('asc');
+    setCurrentPage(1);
   }, [resetSortTrigger]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [routes, sortColumn, sortDirection]);
 
   const handleSort = (column: keyof Route | 'complianceBalance') => {
     if (sortColumn === column) {
@@ -51,6 +58,11 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
     return <span className="ml-1 text-xs">{sortDirection === 'asc' ? '▲' : '▼'}</span>;
   };
 
+  const ITEMS_PER_PAGE = 10;
+  const totalPages = Math.ceil(sortedRoutes.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedRoutes = sortedRoutes.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
   return (
     <div className="bg-white rounded-lg shadow overflow-hidden border border-gray-200">
       <div className="overflow-x-auto">
@@ -80,14 +92,14 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {sortedRoutes.length === 0 ? (
+            {paginatedRoutes.length === 0 ? (
               <tr>
                 <td colSpan={10} className="px-6 py-8 text-center text-gray-500">
                   No routes found matching the current filters.
                 </td>
               </tr>
             ) : (
-              sortedRoutes.map((route) => {
+              paginatedRoutes.map((route) => {
                 const energyInScope = route.fuelConsumption * 41000;
                 const complianceBalance = (TARGET_INTENSITY - route.ghgIntensity) * energyInScope;
                 
@@ -96,7 +108,11 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
                   : (route.ghgIntensity <= TARGET_INTENSITY ? 'bg-green-50' : 'bg-red-50');
 
                 return (
-                  <tr key={route.routeId} className={`hover:bg-gray-100 ${bgClass}`}>
+                  <tr 
+                    key={route.routeId} 
+                    className={`hover:bg-gray-100 ${bgClass} ${onRowClick ? 'cursor-pointer' : ''}`}
+                    onClick={() => onRowClick && onRowClick(route)}
+                  >
                   <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{route.routeId}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-gray-700">{route.vesselType}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-gray-700">{route.fuelType}</td>
@@ -132,6 +148,67 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
           </tbody>
         </table>
       </div>
+      
+      {sortedRoutes.length > 0 && (
+        <div className="bg-white px-4 py-3 border-t border-gray-200 flex items-center justify-between sm:px-6">
+          <div className="flex-1 flex justify-between sm:hidden">
+            <button
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <button
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+            >
+              Next
+            </button>
+          </div>
+          <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm text-gray-700">
+                Showing <span className="font-medium">{startIndex + 1}</span> to <span className="font-medium">{Math.min(startIndex + ITEMS_PER_PAGE, sortedRoutes.length)}</span> of <span className="font-medium">{sortedRoutes.length}</span> results
+              </p>
+            </div>
+            <div>
+              <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
+                >
+                  <span className="sr-only">Previous</span>
+                  Previous
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
+                      currentPage === page
+                        ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'
+                        : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
+                >
+                  <span className="sr-only">Next</span>
+                  Next
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
