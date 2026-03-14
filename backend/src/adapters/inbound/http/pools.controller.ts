@@ -7,7 +7,10 @@ const POOL_SCHEMA = z.object({
   members: z.array(
     z.object({
       shipId: z.string().min(1),
-      cb: z.number()
+      cb_before: z.number().optional(),
+      cb: z.number().optional(),
+    }).refine(data => data.cb_before !== undefined || data.cb !== undefined, {
+      message: 'Either cb_before or cb must be provided'
     })
   ).min(1, 'Pool must contain at least one member')
 });
@@ -27,9 +30,9 @@ export const pool = (req: Request, res: Response): void => {
   const { members } = result.data;
 
   // Map into the format expected by CreatePool application logic
-  const formattedMembers = members.map((m: { shipId: string, cb: number }) => ({
+  const formattedMembers = members.map((m) => ({
     shipId: m.shipId,
-    complianceBalance: m.cb
+    complianceBalance: m.cb_before ?? m.cb ?? 0
   }));
 
   try {

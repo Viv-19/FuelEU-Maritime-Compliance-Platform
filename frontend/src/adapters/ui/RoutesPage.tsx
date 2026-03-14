@@ -38,8 +38,12 @@ export const RoutesPage: React.FC = () => {
   const handleSetBaseline = async (routeId: string) => {
     try {
       setError(null);
-      await apiPost(`/routes/${routeId}/baseline`, {});
-      await fetchRoutes(); // Refresh the list after marking baseline
+      const res = await apiPost(`/routes/${routeId}/baseline`, {});
+      if (res.success && Array.isArray(res.data)) {
+        setRoutes(res.data);
+      } else {
+        await fetchRoutes(); // Fallback: refresh the full list
+      }
     } catch (err: any) {
       setError(err.message || 'Failed to set baseline.');
     }

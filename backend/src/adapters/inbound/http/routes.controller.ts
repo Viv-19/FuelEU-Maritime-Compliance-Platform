@@ -1,12 +1,13 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { compareRoutes } from '../../../core/application/CompareRoutes';
 
-// Hardcoded initial data store mock for demonstration purposes 
-// (until repository layer is implemented in next phase)
+// Demo data store — 5 routes matching seed data
 const MOCK_ROUTES = [
-  { routeId: 'R001', vesselType: 'Container', fuelType: 'HFO', year: 2024, ghgIntensity: 91.0, isBaseline: true },
-  { routeId: 'R002', vesselType: 'BulkCarrier', fuelType: 'LNG', year: 2024, ghgIntensity: 88.0, isBaseline: false },
+  { routeId: 'R001', vesselType: 'Container',   fuelType: 'HFO',   year: 2024, ghgIntensity: 91.2,  fuelConsumption: 5000, distance: 12000, totalEmissions: 45600, isBaseline: true },
+  { routeId: 'R002', vesselType: 'BulkCarrier',  fuelType: 'LNG',   year: 2024, ghgIntensity: 88.0,  fuelConsumption: 4200, distance: 9500,  totalEmissions: 36960, isBaseline: false },
+  { routeId: 'R003', vesselType: 'Tanker',       fuelType: 'VLSFO', year: 2024, ghgIntensity: 95.5,  fuelConsumption: 6100, distance: 15000, totalEmissions: 58255, isBaseline: false },
+  { routeId: 'R004', vesselType: 'Container',    fuelType: 'LNG',   year: 2024, ghgIntensity: 85.0,  fuelConsumption: 3800, distance: 8000,  totalEmissions: 32300, isBaseline: false },
+  { routeId: 'R005', vesselType: 'BulkCarrier',  fuelType: 'HFO',   year: 2023, ghgIntensity: 92.0,  fuelConsumption: 5500, distance: 14000, totalEmissions: 50600, isBaseline: false },
 ];
 
 export const getRoutes = (_req: Request, res: Response): void => {
@@ -31,31 +32,44 @@ export const setBaseline = (req: Request, res: Response): void => {
     return;
   }
 
-  // Purely mock response for setting baseline
+  const routeId = parsedParams.data.id;
+
+  // Toggle baseline: clear all, then set target
+  MOCK_ROUTES.forEach(r => r.isBaseline = false);
+  const route = MOCK_ROUTES.find(r => r.routeId === routeId);
+  if (route) {
+    route.isBaseline = true;
+  }
+
   res.status(200).json({
     success: true,
-    data: {
-      message: 'Baseline route updated',
-      routeId: parsedParams.data.id,
-    },
+    data: MOCK_ROUTES,
   });
 };
 
 export const getComparison = (_req: Request, res: Response): void => {
-  // We assume R001 is the baseline with 91.0
-  const baselineIntensity = 91.0; 
+  const baseline = MOCK_ROUTES.find(r => r.isBaseline);
 
-  // Compute comparisons
-  const comparisons = MOCK_ROUTES.filter(r => !r.isBaseline).map(route => {
-    const result = compareRoutes(baselineIntensity, route.ghgIntensity);
-    return {
-      routeId: route.routeId,
-      ...result,
-    };
-  });
+  if (!baseline) {
+    res.status(200).json({
+      success: true,
+      data: MOCK_ROUTES.map(r => ({
+        routeId: r.routeId,
+        ghgIntensity: r.ghgIntensity,
+        isBaseline: r.isBaseline,
+      })),
+    });
+    return;
+  }
+
+  const data = MOCK_ROUTES.map(route => ({
+    routeId: route.routeId,
+    ghgIntensity: route.ghgIntensity,
+    isBaseline: route.isBaseline,
+  }));
 
   res.status(200).json({
     success: true,
-    data: comparisons,
+    data,
   });
 };

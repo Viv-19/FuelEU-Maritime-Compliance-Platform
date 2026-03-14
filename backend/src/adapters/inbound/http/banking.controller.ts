@@ -57,11 +57,13 @@ export const apply = (req: Request, res: Response): void => {
   const currentBankedAmount = 5000; // Mock available banked amount
 
   try {
-    const applyResult = applyBanked(amount, currentBankedAmount);
+    // applyBanked expects a negative deficitCB, frontend sends positive amount
+    const applyResult = applyBanked(-Math.abs(amount), currentBankedAmount);
     res.status(200).json({
       success: true,
       data: {
         applied: applyResult.applied,
+        newCB: applyResult.newCB,
         remainingBank: applyResult.remainingBank
       }
     });

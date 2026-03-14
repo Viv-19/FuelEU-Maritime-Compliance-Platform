@@ -7,33 +7,35 @@ app.use(express.json());
 app.use('/routes', routesRouter);
 
 describe('Routes API', () => {
-  it('GET /routes should return a list of routes', async () => {
+  it('GET /routes should return a list of 5 routes', async () => {
     const res = await request(app).get('/routes');
     
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
     expect(Array.isArray(res.body.data)).toBe(true);
+    expect(res.body.data.length).toBe(5);
     expect(res.body.data[0]).toHaveProperty('routeId');
+    expect(res.body.data[0]).toHaveProperty('vesselType');
+    expect(res.body.data[0]).toHaveProperty('fuelType');
   });
 
-  it('POST /routes/:id/baseline should update baseline', async () => {
-    const res = await request(app).post('/routes/R001/baseline');
+  it('POST /routes/:id/baseline should return the updated routes array', async () => {
+    const res = await request(app).post('/routes/R002/baseline');
     
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
-    expect(res.body.data.message).toBe('Baseline route updated');
-    expect(res.body.data.routeId).toBe('R001');
+    expect(Array.isArray(res.body.data)).toBe(true);
+    const baseline = res.body.data.find((r: any) => r.isBaseline);
+    expect(baseline.routeId).toBe('R002');
   });
 
-  it('GET /routes/comparison should return comparison results', async () => {
+  it('GET /routes/comparison should return route data for frontend comparison', async () => {
     const res = await request(app).get('/routes/comparison');
     
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
     expect(Array.isArray(res.body.data)).toBe(true);
-    // Based on the mock routes, R002 has 88 as compared to 91.0
-    expect(res.body.data[0]).toHaveProperty('routeId', 'R002');
-    expect(res.body.data[0]).toHaveProperty('percentDiff');
-    expect(res.body.data[0]).toHaveProperty('compliant', true); // 88 <= 89.3368
+    expect(res.body.data[0]).toHaveProperty('routeId');
+    expect(res.body.data[0]).toHaveProperty('ghgIntensity');
   });
 });

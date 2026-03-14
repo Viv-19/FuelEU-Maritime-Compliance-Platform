@@ -2,13 +2,19 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { computeComplianceBalance } from '../../../core/application/ComputeCB';
 
-// Mock DB data lookup
-const MOCK_ROUTES = [
-  { shipId: 'SHIP123', year: 2024, ghgIntensity: 91.0, fuelConsumption: 5000 },
+// Mock ship compliance data — aligned with frontend expectations
+const MOCK_SHIPS = [
+  { shipId: 'SHIP001', year: 2024, ghgIntensity: 88.0, fuelConsumption: 5000 },
+  { shipId: 'SHIP002', year: 2024, ghgIntensity: 91.0, fuelConsumption: 4200 },
+  { shipId: 'SHIP003', year: 2024, ghgIntensity: 95.5, fuelConsumption: 6100 },
 ];
 
 const COMPLIANCE_QUERY_SCHEMA = z.object({
   shipId: z.string().min(1),
+  year: z.string().transform(val => parseInt(val, 10)).refine(val => val >= 2000, "Year must be >= 2000"),
+});
+
+const YEAR_ONLY_SCHEMA = z.object({
   year: z.string().transform(val => parseInt(val, 10)).refine(val => val >= 2000, "Year must be >= 2000"),
 });
 
@@ -26,18 +32,22 @@ export const getCb = (req: Request, res: Response): void => {
 
   const { shipId, year } = result.data;
 
-  // Mock lookup
-  const route = MOCK_ROUTES.find(r => r.shipId === shipId && r.year === year);
+  const ship = MOCK_SHIPS.find(r => r.shipId === shipId && r.year === year);
   
-  if (!route) {
-    res.status(404).json({
-      success: false,
-      error: 'Ship route data not found',
+  if (!ship) {
+    // Return a default positive CB for demo purposes
+    res.status(200).json({
+      success: true,
+      data: {
+        shipId,
+        year,
+        complianceBalance: 4500
+      }
     });
     return;
   }
 
-  const complianceBalance = computeComplianceBalance(route.ghgIntensity, route.fuelConsumption);
+  const complianceBalance = computeComplianceBalance(ship.ghgIntensity, ship.fuelConsumption);
 
   res.status(200).json({
     success: true,
@@ -50,7 +60,7 @@ export const getCb = (req: Request, res: Response): void => {
 };
 
 export const getAdjustedCb = (req: Request, res: Response): void => {
-  const result = COMPLIANCE_QUERY_SCHEMA.safeParse(req.query);
+  const result = YEAR_ONLY_SCHEMA.safeParse(req.query);
 
   if (!result.success) {
     res.status(400).json({
@@ -60,14 +70,17 @@ export const getAdjustedCb = (req: Request, res: Response): void => {
     return;
   }
 
-  // Purely a mocked response demonstrating the endpoint
-  // A real implementation would involve db lookup of sum of banked + pools + current
+  // Return array of ships with cb_before for pooling module
+  const data = MOCK_SHIPS.map(ship => {
+    const cb = computeComplianceBalance(ship.ghgIntensity, ship.fuelConsumption);
+    return {
+      shipId: ship.shipId,
+      cb_before: cb
+    };
+  });
+
   res.status(200).json({
     success: true,
-    data: {
-      shipId: result.data.shipId,
-      year: result.data.year,
-      adjustedCB: 2000 // Mock adjusted value
-    }
+    data,
   });
 };
