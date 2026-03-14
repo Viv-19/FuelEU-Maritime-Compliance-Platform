@@ -64,6 +64,13 @@ export const RoutesPage: React.FC = () => {
     if (filterType === 'year') setSelectedYear(value);
   };
 
+  const handleResetFilters = () => {
+    setSelectedVessel('');
+    setSelectedFuel('');
+    setSelectedYear('');
+    fetchRoutes();
+  };
+
   // Derive unique filter options from the full dataset
   const vesselTypes = useMemo(() => Array.from(new Set(routes.map(r => r.vesselType))).sort(), [routes]);
   const fuelTypes = useMemo(() => Array.from(new Set(routes.map(r => r.fuelType))).sort(), [routes]);
@@ -137,6 +144,7 @@ export const RoutesPage: React.FC = () => {
           selectedFuel={selectedFuel}
           selectedYear={selectedYear}
           onFilterChange={handleFilterChange}
+          onResetFilters={handleResetFilters}
         />
       )}
 
