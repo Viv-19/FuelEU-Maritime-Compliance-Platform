@@ -15,10 +15,23 @@ describe('Route', () => {
     expect(route.isBaseline).toBe(false);
   });
 
-  it('should throw error if routeId is empty', () => {
+  it('should throw error if routeId is empty or wrong format', () => {
     expect(() => {
       new Route('', 'Container', 'LNG', 2024, 78.5, 1000, 5000, 3000, false);
     }).toThrow('routeId must not be empty');
+
+    expect(() => {
+      new Route('ABC', 'Container', 'LNG', 2024, 78.5, 1000, 5000, 3000, false);
+    }).toThrow('Route ID must follow format R001');
+
+    expect(() => {
+      new Route('R12', 'Container', 'LNG', 2024, 78.5, 1000, 5000, 3000, false);
+    }).toThrow('Route ID must follow format R001');
+  });
+
+  it('should auto-uppercase routeId', () => {
+    const route = new Route('r002', 'Container', 'LNG', 2024, 78.5, 1000, 5000, 3000, false);
+    expect(route.routeId).toBe('R002');
   });
 
   it('should throw error if year is < 2000', () => {

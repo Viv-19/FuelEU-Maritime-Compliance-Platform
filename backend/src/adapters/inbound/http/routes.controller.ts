@@ -1,23 +1,27 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
+import { SqlRouteRepository } from '../../outbound/db/SqlRouteRepository';
+import { CreateRoute } from '../../../core/application/CreateRoute';
+import { GetAllRoutes } from '../../../core/application/GetAllRoutes';
+import { Route } from '../../../core/domain/Route';
 
-// Demo data store — 5 routes matching seed data
-const MOCK_ROUTES = [
-  { routeId: 'R001', vesselType: 'Container',   fuelType: 'HFO',   year: 2024, ghgIntensity: 91.2,  fuelConsumption: 5000, distance: 12000, totalEmissions: 45600, isBaseline: true },
-  { routeId: 'R002', vesselType: 'BulkCarrier',  fuelType: 'LNG',   year: 2024, ghgIntensity: 88.0,  fuelConsumption: 4200, distance: 9500,  totalEmissions: 36960, isBaseline: false },
-  { routeId: 'R003', vesselType: 'Tanker',       fuelType: 'VLSFO', year: 2024, ghgIntensity: 95.5,  fuelConsumption: 6100, distance: 15000, totalEmissions: 58255, isBaseline: false },
-  { routeId: 'R004', vesselType: 'Container',    fuelType: 'LNG',   year: 2024, ghgIntensity: 85.0,  fuelConsumption: 3800, distance: 8000,  totalEmissions: 32300, isBaseline: false },
-  { routeId: 'R005', vesselType: 'BulkCarrier',  fuelType: 'HFO',   year: 2023, ghgIntensity: 92.0,  fuelConsumption: 5500, distance: 14000, totalEmissions: 50600, isBaseline: false },
-];
+const routeRepo = new SqlRouteRepository();
+const createRouteUseCase = new CreateRoute(routeRepo);
+const getAllRoutesUseCase = new GetAllRoutes(routeRepo);
 
-export const getRoutes = (_req: Request, res: Response): void => {
-  res.status(200).json({
-    success: true,
-    data: MOCK_ROUTES,
-  });
+export const getRoutes = async (_req: Request, res: Response): Promise<void> => {
+  try {
+    const routes = await getAllRoutesUseCase.execute();
+    res.status(200).json({
+      success: true,
+      data: routes,
+    });
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message });
+  }
 };
 
-export const setBaseline = (req: Request, res: Response): void => {
+export const setBaseline = async (req: Request, res: Response): Promise<void> => {
   const paramsSchema = z.object({
     id: z.string().min(1),
   });
@@ -34,47 +38,37 @@ export const setBaseline = (req: Request, res: Response): void => {
 
   const routeId = parsedParams.data.id;
 
-  // Toggle baseline: clear all, then set target
-  MOCK_ROUTES.forEach(r => r.isBaseline = false);
-  const route = MOCK_ROUTES.find(r => r.routeId === routeId);
-  if (route) {
-    route.isBaseline = true;
-  }
-
-  res.status(200).json({
-    success: true,
-    data: MOCK_ROUTES,
-  });
-};
-
-export const getComparison = (_req: Request, res: Response): void => {
-  const baseline = MOCK_ROUTES.find(r => r.isBaseline);
-
-  if (!baseline) {
+  try {
+    await routeRepo.setBaseline(routeId);
+    const routes = await getAllRoutesUseCase.execute();
     res.status(200).json({
       success: true,
-      data: MOCK_ROUTES.map(r => ({
-        routeId: r.routeId,
-        ghgIntensity: r.ghgIntensity,
-        isBaseline: r.isBaseline,
-      })),
+      data: routes,
     });
-    return;
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message });
   }
-
-  const data = MOCK_ROUTES.map(route => ({
-    routeId: route.routeId,
-    ghgIntensity: route.ghgIntensity,
-    isBaseline: route.isBaseline,
-  }));
-
-  res.status(200).json({
-    success: true,
-    data,
-  });
 };
 
-export const addRoute = (req: Request, res: Response): void => {
+export const getComparison = async (_req: Request, res: Response): Promise<void> => {
+  try {
+    const routes = await getAllRoutesUseCase.execute();
+    const data = routes.map((route: Route) => ({
+      routeId: route.routeId,
+      ghgIntensity: route.ghgIntensity,
+      isBaseline: route.isBaseline,
+    }));
+
+    res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+export const addRoute = async (req: Request, res: Response): Promise<void> => {
   const routeSchema = z.object({
     routeId: z.string().min(1),
     vesselType: z.enum(['Container', 'BulkCarrier', 'Tanker', 'RoRo']),
@@ -96,25 +90,25 @@ export const addRoute = (req: Request, res: Response): void => {
     return;
   }
 
-  // Check for duplicate routeId
-  if (MOCK_ROUTES.some(r => r.routeId === parsed.data.routeId)) {
+  try {
+    const newRoute = await createRouteUseCase.execute({
+      routeId: parsed.data.routeId,
+      vesselType: parsed.data.vesselType,
+      fuelType: parsed.data.fuelType,
+      year: parsed.data.year,
+      ghgIntensity: parsed.data.ghgIntensity,
+      fuelConsumption: parsed.data.fuelConsumption,
+      distance: parsed.data.distance,
+    });
+
+    res.status(201).json({
+      success: true,
+      data: newRoute,
+    });
+  } catch (error: any) {
     res.status(400).json({
       success: false,
-      error: 'Route ID already exists',
+      error: error.message || 'Failed to add route',
     });
-    return;
   }
-
-  const newRoute = {
-    ...parsed.data,
-    totalEmissions: parsed.data.ghgIntensity * parsed.data.fuelConsumption, // Mock calculation
-    isBaseline: false,
-  };
-
-  MOCK_ROUTES.push(newRoute);
-
-  res.status(201).json({
-    success: true,
-    data: newRoute,
-  });
 };

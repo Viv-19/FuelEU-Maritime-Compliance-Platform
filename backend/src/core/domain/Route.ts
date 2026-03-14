@@ -10,12 +10,17 @@ export class Route {
     public readonly totalEmissions: number,
     public readonly isBaseline: boolean
   ) {
+    this.routeId = routeId.toUpperCase();
     this.validate();
   }
 
   private validate(): void {
     if (!this.routeId || this.routeId.trim() === '') {
       throw new Error('routeId must not be empty');
+    }
+    const routeIdRegex = /^R[0-9]{3}$/;
+    if (!routeIdRegex.test(this.routeId)) {
+      throw new Error('Route ID must follow format R001');
     }
     if (this.year < 2000) {
       throw new Error('year must be >= 2000');

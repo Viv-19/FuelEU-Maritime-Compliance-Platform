@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { apiPost } from '../infrastructure/apiClient';
 
 interface AddRouteModalProps {
@@ -6,6 +6,13 @@ interface AddRouteModalProps {
   onClose: () => void;
   onSuccess: () => void;
   showToast: (message: string) => void;
+}
+
+interface FieldErrors {
+  routeId?: string;
+  ghgIntensity?: string;
+  fuelConsumption?: string;
+  distance?: string;
 }
 
 export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, onSuccess, showToast }) => {
@@ -20,6 +27,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   if (!isOpen) return null;
 
@@ -27,14 +35,55 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: name === 'routeId' ? value.toUpperCase() : value
     }));
+    setTouched(prev => ({ ...prev, [name]: true }));
   };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    setTouched(prev => ({ ...prev, [e.target.name]: true }));
+  };
+
+  // Per-field validation
+  const fieldErrors: FieldErrors = useMemo(() => {
+    const errors: FieldErrors = {};
+
+    if (!formData.routeId.trim()) {
+      errors.routeId = 'Route ID is required';
+    } else if (!/^R[0-9]{3}$/.test(formData.routeId)) {
+      errors.routeId = 'Route ID must follow format R001';
+    }
+
+    if (formData.ghgIntensity !== '' && Number(formData.ghgIntensity) <= 0) {
+      errors.ghgIntensity = 'GHG Intensity must be greater than 0';
+    } else if (formData.ghgIntensity === '') {
+      errors.ghgIntensity = 'GHG Intensity is required';
+    }
+
+    if (formData.fuelConsumption !== '' && Number(formData.fuelConsumption) <= 0) {
+      errors.fuelConsumption = 'Fuel Consumption must be greater than 0';
+    } else if (formData.fuelConsumption === '') {
+      errors.fuelConsumption = 'Fuel Consumption is required';
+    }
+
+    if (formData.distance !== '' && Number(formData.distance) <= 0) {
+      errors.distance = 'Distance must be greater than 0';
+    } else if (formData.distance === '') {
+      errors.distance = 'Distance is required';
+    }
+
+    return errors;
+  }, [formData]);
+
+  const isFormValid = Object.keys(fieldErrors).length === 0;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.routeId || !formData.ghgIntensity || !formData.fuelConsumption || !formData.distance) {
-      setError('Please fill in all required fields.');
+
+    // Mark all fields as touched
+    setTouched({ routeId: true, ghgIntensity: true, fuelConsumption: true, distance: true });
+
+    if (!isFormValid) {
       return;
     }
 
@@ -45,11 +94,6 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
       fuelConsumption: Number(formData.fuelConsumption),
       distance: Number(formData.distance),
     };
-
-    if (payload.ghgIntensity <= 0 || payload.fuelConsumption <= 0 || payload.distance <= 0) {
-      setError('Numerical values must be positive.');
-      return;
-    }
 
     try {
       setLoading(true);
@@ -67,6 +111,14 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     } finally {
       setLoading(false);
     }
+  };
+
+  const inputBaseClass = "mt-1 block w-full outline-none border rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm";
+  const inputErrorClass = "border-red-300 text-red-900 focus:ring-red-500 focus:border-red-500";
+  const inputNormalClass = "border-gray-300";
+
+  const getInputClass = (fieldName: keyof FieldErrors) => {
+    return `${inputBaseClass} ${touched[fieldName] && fieldErrors[fieldName] ? inputErrorClass : inputNormalClass}`;
   };
 
   return (
@@ -88,10 +140,13 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
               name="routeId"
               value={formData.routeId}
               onChange={handleChange}
-              className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              onBlur={handleBlur}
+              className={getInputClass('routeId')}
               placeholder="e.g. R006"
-              required
             />
+            {touched.routeId && fieldErrors.routeId && (
+              <p className="mt-1 text-xs text-red-600">{fieldErrors.routeId}</p>
+            )}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -101,7 +156,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="vesselType"
                 value={formData.vesselType}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className={`${inputBaseClass} ${inputNormalClass}`}
               >
                 <option value="Container">Container</option>
                 <option value="BulkCarrier">BulkCarrier</option>
@@ -115,7 +170,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="fuelType"
                 value={formData.fuelType}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className={`${inputBaseClass} ${inputNormalClass}`}
               >
                 <option value="HFO">HFO</option>
                 <option value="LNG">LNG</option>
@@ -133,7 +188,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="year"
                 value={formData.year}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className={`${inputBaseClass} ${inputNormalClass}`}
                 required
               />
             </div>
@@ -145,9 +200,12 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="ghgIntensity"
                 value={formData.ghgIntensity}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
+                onBlur={handleBlur}
+                className={getInputClass('ghgIntensity')}
               />
+              {touched.ghgIntensity && fieldErrors.ghgIntensity && (
+                <p className="mt-1 text-xs text-red-600">{fieldErrors.ghgIntensity}</p>
+              )}
             </div>
           </div>
 
@@ -160,9 +218,12 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="fuelConsumption"
                 value={formData.fuelConsumption}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
+                onBlur={handleBlur}
+                className={getInputClass('fuelConsumption')}
               />
+              {touched.fuelConsumption && fieldErrors.fuelConsumption && (
+                <p className="mt-1 text-xs text-red-600">{fieldErrors.fuelConsumption}</p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Distance (nm)</label>
@@ -171,9 +232,12 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
                 name="distance"
                 value={formData.distance}
                 onChange={handleChange}
-                className="mt-1 block w-full outline-none border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
+                onBlur={handleBlur}
+                className={getInputClass('distance')}
               />
+              {touched.distance && fieldErrors.distance && (
+                <p className="mt-1 text-xs text-red-600">{fieldErrors.distance}</p>
+              )}
             </div>
           </div>
 
@@ -188,8 +252,8 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
             </button>
             <button
               type="submit"
-              className="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              disabled={loading}
+              className="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loading || !isFormValid}
             >
               {loading ? 'Adding...' : 'Add Route'}
             </button>

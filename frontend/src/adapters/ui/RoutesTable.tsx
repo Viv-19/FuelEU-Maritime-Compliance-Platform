@@ -7,9 +7,16 @@ interface RoutesTableProps {
   onSetBaseline: (routeId: string) => void;
   resetSortTrigger?: number;
   onRowClick?: (route: Route) => void;
+  loading?: boolean;
 }
 
-export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline, resetSortTrigger, onRowClick }) => {
+export const RoutesTable: React.FC<RoutesTableProps> = ({ 
+  routes, 
+  onSetBaseline, 
+  resetSortTrigger, 
+  onRowClick,
+  loading = false
+}) => {
   const TARGET_INTENSITY = 89.3368;
   const [sortColumn, setSortColumn] = useState<keyof Route | 'complianceBalance' | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -92,7 +99,22 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {paginatedRoutes.length === 0 ? (
+            {loading ? (
+              Array.from({ length: 5 }).map((_, idx) => (
+                <tr key={`skeleton-${idx}`}>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-16"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-12 ml-auto"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20 ml-auto"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24 ml-auto"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-28 ml-auto"></div></td>
+                  <td className="px-6 py-4 whitespace-nowrap text-center"><div className="h-8 bg-gray-200 rounded animate-pulse w-24 mx-auto"></div></td>
+                </tr>
+              ))
+            ) : paginatedRoutes.length === 0 ? (
               <tr>
                 <td colSpan={10} className="px-6 py-8 text-center text-gray-500">
                   No routes found matching the current filters.
@@ -104,7 +126,7 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({ routes, onSetBaseline,
                 const complianceBalance = (TARGET_INTENSITY - route.ghgIntensity) * energyInScope;
                 
                 const bgClass = route.isBaseline 
-                  ? 'bg-indigo-50/30' 
+                  ? 'bg-blue-50 border-l-4 border-blue-400' 
                   : (route.ghgIntensity <= TARGET_INTENSITY ? 'bg-green-50' : 'bg-red-50');
 
                 return (

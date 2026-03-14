@@ -47,23 +47,24 @@ describe('RoutesTable', () => {
     expect(screen.getByText('(Surplus)')).toBeInTheDocument();
   });
 
-  it('renders disabled Baseline button for baseline route', () => {
+  it('renders Baseline badge for baseline route and Set as Baseline button for others', () => {
     const handleSetBaseline = vi.fn();
     render(<RoutesTable routes={mockRoutes} onSetBaseline={handleSetBaseline} />);
 
-    const buttons = screen.getAllByRole('button');
-    expect(buttons[0]).toHaveTextContent('Baseline');
-    expect(buttons[0]).toBeDisabled();
-    
-    expect(buttons[1]).toHaveTextContent('Set Baseline');
-    expect(buttons[1]).not.toBeDisabled();
+    // Baseline route shows a badge in the action column
+    expect(screen.getByText('Baseline')).toBeInTheDocument();
+
+    // Non-baseline route shows "Set as Baseline" button
+    const setBaselineBtn = screen.getByText('Set as Baseline');
+    expect(setBaselineBtn).toBeInTheDocument();
+    expect(setBaselineBtn).not.toBeDisabled();
   });
 
   it('calls onSetBaseline when a non-baseline button is clicked', () => {
     const handleSetBaseline = vi.fn();
     render(<RoutesTable routes={mockRoutes} onSetBaseline={handleSetBaseline} />);
 
-    const setBaselineBtn = screen.getByText('Set Baseline');
+    const setBaselineBtn = screen.getByText('Set as Baseline');
     fireEvent.click(setBaselineBtn);
 
     expect(handleSetBaseline).toHaveBeenCalledTimes(1);

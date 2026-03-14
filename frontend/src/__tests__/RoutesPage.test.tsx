@@ -42,9 +42,11 @@ describe('RoutesPage', () => {
   it('fetches and renders routes data on load', async () => {
     vi.mocked(apiClient.apiGet).mockResolvedValueOnce({ success: true, data: mockData });
 
-    render(<RoutesPage />);
+    const { container } = render(<RoutesPage />);
 
-    expect(screen.getByText(/Loading routes.../i)).toBeInTheDocument();
+    // Skeleton loading rows should be visible (animate-pulse divs)
+    const skeletonElements = container.querySelectorAll('.animate-pulse');
+    expect(skeletonElements.length).toBeGreaterThan(0);
 
     await waitFor(() => {
       expect(screen.getByText('R001')).toBeInTheDocument();
@@ -86,7 +88,7 @@ describe('RoutesPage', () => {
       expect(screen.getByText('R002')).toBeInTheDocument();
     });
 
-    const setBaselineBtn = screen.getByText('Set Baseline');
+    const setBaselineBtn = screen.getByText('Set as Baseline');
     fireEvent.click(setBaselineBtn);
 
     await waitFor(() => {
@@ -101,7 +103,7 @@ describe('RoutesPage', () => {
     render(<RoutesPage />);
 
     await waitFor(() => {
-      expect(screen.getByText(/Failed to fetch routes. Check backend connection./i)).toBeInTheDocument();
+      expect(screen.getByText(/Failed to load routes/i)).toBeInTheDocument();
       expect(screen.getByText(/Retry/i)).toBeInTheDocument();
     });
   });

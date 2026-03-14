@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { Route } from '../../core/domain/Route';
 import { apiGet, apiPost } from '../infrastructure/apiClient';
 import { RouteFilters } from './RouteFilters';
@@ -48,7 +48,7 @@ export const RoutesPage: React.FC = () => {
         throw new Error('Invalid response format');
       }
     } catch (err: any) {
-      setError('Failed to fetch routes. Check backend connection.');
+      setError('Failed to load routes');
     } finally {
       setLoading(false);
     }
@@ -104,6 +104,31 @@ export const RoutesPage: React.FC = () => {
     });
   }, [routes, debouncedQuery, selectedVessel, selectedFuel, selectedYear]);
 
+  const handleExportCSV = useCallback(() => {
+    const headers = ['routeId', 'vesselType', 'fuelType', 'year', 'ghgIntensity', 'fuelConsumption', 'distance', 'totalEmissions'];
+    const csvRows = [
+      headers.join(','),
+      ...filteredRoutes.map(r => [
+        r.routeId,
+        r.vesselType,
+        r.fuelType,
+        r.year,
+        r.ghgIntensity,
+        r.fuelConsumption,
+        r.distance,
+        r.totalEmissions,
+      ].join(','))
+    ];
+    const csvString = csvRows.join('\n');
+    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'routes_export.csv';
+    link.click();
+    URL.revokeObjectURL(url);
+  }, [filteredRoutes]);
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center mb-4">
@@ -115,6 +140,16 @@ export const RoutesPage: React.FC = () => {
             disabled={loading}
           >
             {loading ? 'Refreshing...' : 'Refresh Data'}
+          </button>
+          <button
+            onClick={handleExportCSV}
+            disabled={filteredRoutes.length === 0}
+            className="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
+          >
+            <svg className="h-4 w-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Export CSV
           </button>
           <button
             onClick={() => setIsAddModalOpen(true)}
@@ -168,18 +203,13 @@ export const RoutesPage: React.FC = () => {
         />
       )}
 
-      {loading && routes.length === 0 ? (
-        <div className="flex justify-center items-center h-64 bg-white rounded-lg shadow border border-gray-200">
-          <p className="text-gray-500 font-medium animate-pulse">Loading routes...</p>
-        </div>
-      ) : (
-        <RoutesTable
-          routes={filteredRoutes}
-          onSetBaseline={handleSetBaseline}
-          resetSortTrigger={resetSortTrigger}
-          onRowClick={setSelectedRoute}
-        />
-      )}
+      <RoutesTable
+        routes={filteredRoutes}
+        onSetBaseline={handleSetBaseline}
+        resetSortTrigger={resetSortTrigger}
+        onRowClick={setSelectedRoute}
+        loading={loading}
+      />
 
       <AddRouteModal
         isOpen={isAddModalOpen}
