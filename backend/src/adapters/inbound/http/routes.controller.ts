@@ -73,3 +73,48 @@ export const getComparison = (_req: Request, res: Response): void => {
     data,
   });
 };
+
+export const addRoute = (req: Request, res: Response): void => {
+  const routeSchema = z.object({
+    routeId: z.string().min(1),
+    vesselType: z.enum(['Container', 'BulkCarrier', 'Tanker', 'RoRo']),
+    fuelType: z.enum(['HFO', 'LNG', 'MGO', 'VLSFO']),
+    year: z.number().int().min(2000),
+    ghgIntensity: z.number().positive(),
+    fuelConsumption: z.number().positive(),
+    distance: z.number().positive(),
+  });
+
+  const parsed = routeSchema.safeParse(req.body);
+
+  if (!parsed.success) {
+    res.status(400).json({
+      success: false,
+      error: 'Invalid request data',
+      details: parsed.error.errors,
+    });
+    return;
+  }
+
+  // Check for duplicate routeId
+  if (MOCK_ROUTES.some(r => r.routeId === parsed.data.routeId)) {
+    res.status(400).json({
+      success: false,
+      error: 'Route ID already exists',
+    });
+    return;
+  }
+
+  const newRoute = {
+    ...parsed.data,
+    totalEmissions: parsed.data.ghgIntensity * parsed.data.fuelConsumption, // Mock calculation
+    isBaseline: false,
+  };
+
+  MOCK_ROUTES.push(newRoute);
+
+  res.status(201).json({
+    success: true,
+    data: newRoute,
+  });
+};

@@ -101,7 +101,8 @@ describe('RoutesPage', () => {
     render(<RoutesPage />);
 
     await waitFor(() => {
-      expect(screen.getByText(/Network disconnected/i)).toBeInTheDocument();
+      expect(screen.getByText(/Failed to fetch routes. Check backend connection./i)).toBeInTheDocument();
+      expect(screen.getByText(/Retry/i)).toBeInTheDocument();
     });
   });
 });
