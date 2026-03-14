@@ -35,10 +35,16 @@ describe('RoutesTable', () => {
 
     // Check headers
     expect(screen.getByText('Route ID')).toBeInTheDocument();
+    expect(screen.getByText('Compliance Balance (CB)')).toBeInTheDocument();
     
     // Check Content rows
     expect(screen.getByText('R001')).toBeInTheDocument();
     expect(screen.getByText('R002')).toBeInTheDocument();
+    
+    // (89.3368 - 91.0) * (5000 * 41000) = deficit
+    expect(screen.getByText('(Deficit)')).toBeInTheDocument();
+    // (89.3368 - 88.0) * (3000 * 41000) = surplus
+    expect(screen.getByText('(Surplus)')).toBeInTheDocument();
   });
 
   it('renders disabled Baseline button for baseline route', () => {
