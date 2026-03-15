@@ -1,0 +1,14 @@
+﻿src/__tests__/PoolMemberList.test.tsx(14,28): error TS2322: Type 'PoolMember[]' is not assignable to type 'PoolMemberItem[]'.
+  Property 'cbBefore' is missing in type 'PoolMember' but required in type 'PoolMemberItem'.
+src/__tests__/PoolMemberList.test.tsx(22,28): error TS2322: Type 'PoolMember[]' is not assignable to type 'PoolMemberItem[]'.
+  Property 'cbBefore' is missing in type 'PoolMember' but required in type 'PoolMemberItem'.
+src/__tests__/PoolMemberList.test.tsx(30,28): error TS2322: Type 'PoolMember[]' is not assignable to type 'PoolMemberItem[]'.
+  Property 'cbBefore' is missing in type 'PoolMember' but required in type 'PoolMemberItem'.
+src/__tests__/PoolSummary.test.tsx(7,66): error TS2322: Type '{ totalCBBefore: number; totalCBAfter: null; poolValid: boolean; }' is not assignable to type 'IntrinsicAttributes & PoolSummaryProps'.
+  Property 'poolValid' does not exist on type 'IntrinsicAttributes & PoolSummaryProps'.
+src/__tests__/PoolSummary.test.tsx(14,66): error TS2322: Type '{ totalCBBefore: number; totalCBAfter: null; poolValid: boolean; }' is not assignable to type 'IntrinsicAttributes & PoolSummaryProps'.
+  Property 'poolValid' does not exist on type 'IntrinsicAttributes & PoolSummaryProps'.
+src/__tests__/PoolSummary.test.tsx(20,66): error TS2322: Type '{ totalCBBefore: number; totalCBAfter: number; poolValid: boolean; }' is not assignable to type 'IntrinsicAttributes & PoolSummaryProps'.
+  Property 'poolValid' does not exist on type 'IntrinsicAttributes & PoolSummaryProps'.
+src/__tests__/PoolSummary.test.tsx(26,66): error TS2322: Type '{ totalCBBefore: number; totalCBAfter: null; poolValid: boolean; }' is not assignable to type 'IntrinsicAttributes & PoolSummaryProps'.
+  Property 'poolValid' does not exist on type 'IntrinsicAttributes & PoolSummaryProps'.

@@ -254,9 +254,9 @@ Content-Type: application/json
 {
   "year": 2024,
   "members": [
-    { "shipId": "Ship-A", "cb_before": 6000 },
-    { "shipId": "Ship-B", "cb_before": -4000 },
-    { "shipId": "Ship-C", "cb_before": -1000 }
+    { "shipId": "Ship-A", "cbBefore": 6000 },
+    { "shipId": "Ship-B", "cbBefore": -4000 },
+    { "shipId": "Ship-C", "cbBefore": -1000 }
   ]
 }
 ```

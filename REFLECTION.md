@@ -50,7 +50,7 @@ CB = (Target − Actual) × Energy
 
 the values and assumptions used in the implementation had to be manually verified against the regulatory documentation. AI agents can implement logic quickly, but **they cannot independently confirm regulatory accuracy without explicit verification**.
 
-Another challenge appeared in **automatically generated tests**. Some test assertions assumed unique DOM elements and used selectors such as `getByText`. In cases where multiple elements contained identical values, the tests failed due to selector ambiguity. These were corrected by switching to `getAllByText` and adding count-based assertions.
+Another challenge appeared in **automatically generated tests**. Some test assertions assumed unique DOM elements and used selectors such as `getByText`. In cases where multiple elements contained identical values (like in the Pooling module where a ship ID appeared both in a filter dropdown and in the results table), the tests failed due to selector ambiguity. These were corrected by switching to `getAllByText`, adding count-based assertions, and selecting checkboxes by index rather than assuming text singularity.
 
 **Floating-point arithmetic** also introduced subtle issues. For example, calculations such as:
 

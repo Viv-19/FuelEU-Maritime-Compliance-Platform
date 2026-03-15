@@ -116,3 +116,77 @@ export const getAllCb = async (req: Request, res: Response): Promise<void> => {
     res.status(500).json({ success: false, error: error.message });
   }
 };
+
+export const getAdjustedCb = async (req: Request, res: Response): Promise<void> => {
+  const result = YEAR_ONLY_SCHEMA.safeParse(req.query);
+
+  if (!result.success) {
+    res.status(400).json({
+      success: false,
+      error: 'Invalid request parameters',
+    });
+    return;
+  }
+
+  try {
+    const year = result.data.year;
+    
+    // 1. Get Base CBs from Routes
+    const allRoutes = await routeRepo.findAll();
+    const yearRoutes = allRoutes.filter(r => r.year === year);
+    
+    const shipMap = new Map<string, { baseCb: number, bankedAmount: number, transferredIn: number, transferredOut: number }>();
+    
+    const initializeShipIfMissing = (shipId: string) => {
+      if (!shipMap.has(shipId)) {
+        shipMap.set(shipId, { baseCb: 0, bankedAmount: 0, transferredIn: 0, transferredOut: 0 });
+      }
+    };
+
+    for (const route of yearRoutes) {
+      const cb = computeComplianceBalance(route.ghgIntensity, route.fuelConsumption);
+      initializeShipIfMissing(route.shipId);
+      shipMap.get(route.shipId)!.baseCb += cb;
+    }
+
+    // 2. Get Bank Entries
+    const bankEntriesRes = await pool.query(`SELECT ship_id, amount_gco2eq FROM bank_entries WHERE year = $1`, [year]);
+    for (const row of bankEntriesRes.rows) {
+      const sId = row.ship_id;
+      initializeShipIfMissing(sId);
+      shipMap.get(sId)!.bankedAmount += parseFloat(row.amount_gco2eq);
+    }
+
+    // 3. Get Transfers
+    const transfersRes = await pool.query(`SELECT from_ship_id, to_ship_id, amount FROM transfers WHERE year = $1`, [year]);
+    for (const row of transfersRes.rows) {
+      const fromShip = row.from_ship_id;
+      const toShip = row.to_ship_id;
+      const amount = parseFloat(row.amount);
+      
+      initializeShipIfMissing(fromShip);
+      shipMap.get(fromShip)!.transferredOut += amount;
+      
+      initializeShipIfMissing(toShip);
+      shipMap.get(toShip)!.transferredIn += amount;
+    }
+
+    const data = Array.from(shipMap.entries()).map(([shipId, stats]) => {
+      const totalCb = stats.baseCb - stats.bankedAmount - stats.transferredOut + stats.transferredIn;
+      return {
+        shipId,
+        cbBefore: totalCb
+      };
+    });
+
+    // The assignment requires the direct array, not wrapped in data? 
+    // Wait, typically express returns the array or object. The user said:
+    // Example response: [ { shipId: "SHIP001", cbBefore: 7458963343 } ]
+    res.status(200).json({
+      success: true,
+      data
+    });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+};

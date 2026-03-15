@@ -10,16 +10,20 @@ vi.mock('../adapters/infrastructure/apiClient', () => ({
 }));
 
 const mockShips = [
-  { shipId: 'Ship-A', cb_before: 6000 },
-  { shipId: 'Ship-B', cb_before: -4000 },
-  { shipId: 'Ship-C', cb_before: -1000 }
+  { shipId: 'Ship-A', cbBefore: 6000 },
+  { shipId: 'Ship-B', cbBefore: -4000 },
+  { shipId: 'Ship-C', cbBefore: -1000 }
 ];
 
-const mockPoolResult = [
-  { shipId: 'Ship-A', cb_before: 6000, cb_after: 1000 },
-  { shipId: 'Ship-B', cb_before: -4000, cb_after: 0 },
-  { shipId: 'Ship-C', cb_before: -1000, cb_after: 0 }
-];
+const mockPoolResult = {
+  totalBefore: 1000,
+  totalAfter: 1000,
+  members: [
+    { shipId: 'Ship-A', cbBefore: 6000, cbAfter: 1000 },
+    { shipId: 'Ship-B', cbBefore: -4000, cbAfter: 0 },
+    { shipId: 'Ship-C', cbBefore: -1000, cbAfter: 0 }
+  ]
+};
 
 // Mock routes data for the RoutesProvider
 const mockRoutes = [
@@ -36,57 +40,93 @@ describe('PoolingPage', () => {
   });
 
   it('loads and displays ship compliance data', async () => {
-    // First call is RoutesContext fetching routes, second is PoolingPage fetching CB
-    vi.mocked(apiClient.apiGet)
-      .mockResolvedValueOnce({ success: true, data: mockRoutes })
-      .mockResolvedValueOnce({ success: true, data: mockShips });
+    vi.mocked(apiClient.apiGet).mockImplementation(async (url: string) => {
+      if (url.includes('/routes')) return { success: true, data: mockRoutes } as any;
+      if (url.includes('/compliance')) return { success: true, data: mockShips } as any;
+      return { success: true, data: [] } as any;
+    });
 
     renderWithProvider(<PoolingPage />);
 
     await waitFor(() => {
-      expect(screen.getByText('Ship-A')).toBeInTheDocument();
-      expect(screen.getByText('Ship-B')).toBeInTheDocument();
-      expect(screen.getByText('Ship-C')).toBeInTheDocument();
+      expect(screen.getAllByText('Ship-A').length).toBeGreaterThan(0);
+      expect(screen.getAllByText('Ship-B').length).toBeGreaterThan(0);
+      expect(screen.getAllByText('Ship-C').length).toBeGreaterThan(0);
     });
   });
 
-  it('shows valid pool when total CB >= 0', async () => {
-    vi.mocked(apiClient.apiGet)
-      .mockResolvedValueOnce({ success: true, data: mockRoutes })
-      .mockResolvedValueOnce({ success: true, data: mockShips });
+  it('selects ships and shows valid pool indicator', async () => {
+    vi.mocked(apiClient.apiGet).mockImplementation(async (url: string) => {
+      if (url.includes('/routes')) return { success: true, data: mockRoutes } as any;
+      if (url.includes('/compliance')) return { success: true, data: mockShips } as any;
+      return { success: true, data: [] } as any;
+    });
 
     renderWithProvider(<PoolingPage />);
 
     await waitFor(() => {
-      expect(screen.getByText('Valid Pool')).toBeInTheDocument();
+      expect(screen.getAllByText('Ship-A').length).toBeGreaterThan(0);
+    });
+
+    // Checkboxes are in the first column, we can click the rows or the checkboxes
+    const checkboxes = screen.getAllByRole('checkbox');
+    // first checkbox is "select all", next ones are for ships
+    fireEvent.click(checkboxes[1]); // Ship-A
+    fireEvent.click(checkboxes[2]); // Ship-B
+
+    await waitFor(() => {
+      // Total CB = 6000 + -4000 = 2000 >= 0
+      expect(screen.getByText('VERIFIED POOL')).toBeInTheDocument();
       expect(screen.getByText('Create Pool')).not.toBeDisabled();
     });
   });
 
   it('shows invalid pool when total CB < 0', async () => {
     const invalidShips = [
-      { shipId: 'Ship-A', cb_before: 1000 },
-      { shipId: 'Ship-B', cb_before: -4000 }
+      { shipId: 'Ship-A', cbBefore: 1000 },
+      { shipId: 'Ship-B', cbBefore: -4000 }
     ];
-    vi.mocked(apiClient.apiGet)
-      .mockResolvedValueOnce({ success: true, data: mockRoutes })
-      .mockResolvedValueOnce({ success: true, data: invalidShips });
+    vi.mocked(apiClient.apiGet).mockImplementation(async (url: string) => {
+      if (url.includes('/routes')) return { success: true, data: mockRoutes } as any;
+      if (url.includes('/compliance')) return { success: true, data: invalidShips } as any;
+      return { success: true, data: [] } as any;
+    });
 
     renderWithProvider(<PoolingPage />);
 
     await waitFor(() => {
-      expect(screen.getByText('Invalid Pool')).toBeInTheDocument();
+      expect(screen.getAllByText('Ship-B').length).toBeGreaterThan(0);
+    });
+
+    const checkboxes = screen.getAllByRole('checkbox');
+    fireEvent.click(checkboxes[1]); // Ship-A
+    fireEvent.click(checkboxes[2]); // Ship-B
+
+    await waitFor(() => {
+      // Total CB = 1000 + -4000 = -3000 < 0
+      expect(screen.getByText('INVALID POOL')).toBeInTheDocument();
       expect(screen.getByText('Create Pool')).toBeDisabled();
     });
   });
 
-  it('creates pool and updates cb_after values', async () => {
-    vi.mocked(apiClient.apiGet)
-      .mockResolvedValueOnce({ success: true, data: mockRoutes })
-      .mockResolvedValueOnce({ success: true, data: mockShips });
+  it('creates pool and shows results', async () => {
+    vi.mocked(apiClient.apiGet).mockImplementation(async (url: string) => {
+      if (url.includes('/routes')) return { success: true, data: mockRoutes } as any;
+      if (url.includes('/compliance')) return { success: true, data: mockShips } as any;
+      return { success: true, data: [] } as any;
+    });
+    
     vi.mocked(apiClient.apiPost).mockResolvedValueOnce({ success: true, data: mockPoolResult });
 
     renderWithProvider(<PoolingPage />);
+
+    await waitFor(() => {
+      expect(screen.getAllByText('Ship-A').length).toBeGreaterThan(0);
+    });
+
+    // Select all
+    const selectAllCheckbox = screen.getAllByRole('checkbox')[0];
+    fireEvent.click(selectAllCheckbox);
 
     await waitFor(() => {
       expect(screen.getByText('Create Pool')).not.toBeDisabled();
@@ -95,15 +135,18 @@ describe('PoolingPage', () => {
     fireEvent.click(screen.getByText('Create Pool'));
 
     await waitFor(() => {
-      expect(screen.getByText('1,000')).toBeInTheDocument();
+      // should display pool results table
+      expect(screen.getByText('Pool Results')).toBeInTheDocument();
       expect(apiClient.apiPost).toHaveBeenCalledTimes(1);
     });
   });
 
   it('handles API errors gracefully', async () => {
-    vi.mocked(apiClient.apiGet)
-      .mockResolvedValueOnce({ success: true, data: mockRoutes })
-      .mockRejectedValueOnce(new Error('Server down'));
+    vi.mocked(apiClient.apiGet).mockImplementation(async (url: string) => {
+      if (url.includes('/routes')) return { success: true, data: mockRoutes } as any;
+      if (url.includes('/compliance')) throw new Error('Server down');
+      return { success: true, data: [] } as any;
+    });
 
     renderWithProvider(<PoolingPage />);
 

@@ -311,6 +311,49 @@ the frontend successfully fetched route data.
 
 ---
 
+# Example 6 — Pooling Module Implementation (Phase 10)
+
+### Prompt
+
+```
+You are a Staff-Level Frontend Engineer implementing the Pooling tab
+for the FuelEU Maritime Dashboard.
+
+Users must be able to:
+
+• select ships with surplus and deficit compliance balances
+• verify that the pool sum meets article 21 validity (Total CB >= 0)
+• create a pool and view the dynamically recalculated balances
+```
+
+### Generated Output (Excerpt)
+
+```tsx
+const isPoolValid = selectedShips.length >= 2 && totalCBBefore >= 0;
+
+return (
+  <button
+    onClick={handleCreatePool}
+    disabled={!isPoolValid}
+    className="bg-blue-600 text-white px-6 py-2 rounded-lg"
+  >
+    Create Pool
+  </button>
+)
+```
+
+### Usage
+
+This module formalized the Article 21 Pooling functionality:
+
+* fetching dynamically adjusted ship balances from `GET /compliance/adjusted-cb`
+* filtering selection tables accurately
+* allowing pool groupings that transfer credits from surplus ships to offset deficits without letting surplus drop below 0
+
+State synchronization was verified to handle mock data testing robustly.
+
+---
+
 # Validation / Corrections
 
 All AI-generated code was manually reviewed.

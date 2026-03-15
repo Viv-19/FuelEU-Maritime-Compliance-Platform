@@ -39,15 +39,22 @@ export const pool = (req: Request, res: Response): void => {
     const pooledMembers = createPool(formattedMembers);
     
     // Convert output back to the REST response contract expected
-    const responseData = pooledMembers.map(m => ({
+    const responseMembers = pooledMembers.map(m => ({
       shipId: m.shipId,
-      cb_before: m.cbBefore,
-      cb_after: m.cbAfter
+      cbBefore: m.cbBefore,
+      cbAfter: m.cbAfter
     }));
+
+    const totalBefore = responseMembers.reduce((sum, m) => sum + m.cbBefore, 0);
+    const totalAfter = responseMembers.reduce((sum, m) => sum + m.cbAfter, 0);
 
     res.status(200).json({
       success: true,
-      data: responseData
+      data: {
+        totalBefore,
+        totalAfter,
+        members: responseMembers
+      }
     });
 
   } catch (error: any) {

@@ -1,0 +1,869 @@
+﻿
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/vives/OneDrive/Desktop/full stack developer/Varuna/FuelEU-Maritime-Compliance-Platform/frontend[39m
+
+ [32mΓ£ô[39m src/__tests__/ApplyButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 496[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/BankButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 863[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m BankButton[2m > [22mrenders enabled when not disabled [33m 456[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolSummary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 978[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolSummary[2m > [22mrenders valid pool indicator when totalCB >= 0 [33m 826[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/CompareTable.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1109[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m ComparisonTable[2m > [22mrenders comparison rows correctly [33m 958[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolMemberList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1131[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolMemberList[2m > [22mrenders all ship rows correctly [33m 922[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/RoutesTable.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1637[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m RoutesTable[2m > [22mrenders correctly with given routes [33m 1042[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/BankingPage.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 2102[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m BankingPage[2m > [22mloads and displays ship data derived from routes [33m 1342[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolingPage.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 3480[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolingPage[2m > [22mloads and displays ship compliance data [33m 1223[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolingPage[2m > [22mselects ships and shows valid pool indicator [33m 1153[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolingPage[2m > [22mshows invalid pool when total CB < 0 [33m 476[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m PoolingPage[2m > [22mcreates pool and shows results [33m 386[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/RoutesPage.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 2965[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m RoutesPage[2m > [22mfetches and renders routes data on load [33m 1446[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m RoutesPage[2m > [22mshows ship-level KPI cards (unique ship count, not route count) [33m 352[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m RoutesPage[2m > [22mfilters data appropriately using dropdowns [33m 881[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/ComparisonChart.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 390[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m TopDeviationChart[2m > [22mrenders without crashing [33m 375[2mms[22m[39m
+node.exe : [90mstderr[2m | 
+src/__tests__/ComparePage.test.tsx[2m > 
+[22m[2mComparePage[2m > [22m[2mfetches and processes 
+comparison data correctly
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([90mstderr 
+   [2m... data correctly:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[22m[39mThe width(-1) and height(-1) of chart should be 
+greater than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+
+ [32mΓ£ô[39m src/__tests__/App.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 430[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m App[2m > [22mrenders the dashboard heading [33m 327[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/ComparePage.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 684[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m ComparePage[2m > [22mfetches and processes comparison data correctly [33m 533[2mms[22m[39m
+[90mstderr[2m | src/__tests__/TabLayout.test.tsx[2m > 
+[22m[2mTabLayout Navigation[2m > [22m[2mnavigates to 
+different route upon tab click
+[22m[39mWarning: An update to RoutesProvider inside a 
+test was not wrapped in act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to RoutesProvider inside a test was 
+not wrapped in act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Fo inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Fo (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:11437)
+    at div
+    at c (file:///C:/Users/vives/OneDrive/Desktop/full%20s
+tack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfor
+m/frontend/node_modules/@headlessui/react/dist/internal/op
+en-closed.js:1:263)
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ae inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Fo inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Fo (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:11437)
+    at div
+    at c (file:///C:/Users/vives/OneDrive/Desktop/full%20s
+tack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfor
+m/frontend/node_modules/@headlessui/react/dist/internal/op
+en-closed.js:1:263)
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+ [32mΓ£ô[39m src/__tests__/TabLayout.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 913[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m TabLayout Navigation[2m > [22mrenders all tab links [33m 503[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m TabLayout Navigation[2m > [22mnavigates to different route upon tab click [33m 406[2mms[22m[39m
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Mo inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Mo (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:13585)
+    at c (file:///C:/Users/vives/OneDrive/Desktop/full%20s
+tack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfor
+m/frontend/node_modules/@headlessui/react/dist/internal/op
+en-closed.js:1:263)
+    at Ae (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/internal/f
+loating.js:1:1331)
+    at file:///C:/Users/vives/OneDrive/Desktop/full%20stac
+k%20developer/Varuna/FuelEU-Maritime-Compliance-Platform/f
+rontend/node_modules/@headlessui/react/dist/components/lab
+el/label.js:1:1150
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+Warning: An update to Ao inside a test was not wrapped in 
+act(...).
+
+When testing, code that causes React state updates should 
+be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user 
+would see in the browser. Learn more at 
+https://reactjs.org/link/wrap-tests-with-act
+    at Ao (file:///C:/Users/vives/OneDrive/Desktop/full%20
+stack%20developer/Varuna/FuelEU-Maritime-Compliance-Platfo
+rm/frontend/node_modules/@headlessui/react/dist/components
+/combobox/combobox.js:1:5067)
+    at div
+    at BaselineSelector 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\BaselineSelector.tsx:6:29)
+    at div
+    at div
+    at CompareDashboard 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\components\compare\CompareDashboard.tsx:12:29)
+    at div
+    at ComparePageContent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\ComparePage.tsx:72:102)
+    at BaselineProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\BaselineContext.tsx:6:29)
+    at ComparePage
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+
+
+[2m Test Files [22m [1m[32m13 passed[39m[22m[90m (13)[39m
+[2m      Tests [22m [1m[32m44 passed[39m[22m[90m (44)[39m
+[2m   Start at [22m 08:33:33
+[2m   Duration [22m 24.78s[2m (transform 14.50s, setup 32.16s, collect 88.54s, tests 17.18s, environment 87.33s, prepare 4.56s)[22m
+
