@@ -3,6 +3,9 @@ import React from 'react';
 interface RouteFiltersProps {
   searchQuery: string;
   onSearchChange: (value: string) => void;
+  shipIds: string[];
+  selectedShip: string;
+  onShipChange: (value: string) => void;
   vesselTypes: string[];
   fuelTypes: string[];
   years: number[];
@@ -16,6 +19,9 @@ interface RouteFiltersProps {
 export const RouteFilters: React.FC<RouteFiltersProps> = ({
   searchQuery,
   onSearchChange,
+  shipIds,
+  selectedShip,
+  onShipChange,
   vesselTypes,
   fuelTypes,
   years,
@@ -42,13 +48,30 @@ export const RouteFilters: React.FC<RouteFiltersProps> = ({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search by Route ID..."
-            className="w-full bg-white text-gray-800 placeholder-gray-400 border border-gray-300 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"
+            className="w-full bg-white text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"
           />
         </div>
       </div>
 
       {/* Filter Dropdowns */}
       <div className="flex flex-wrap gap-4 items-end">
+        <div className="flex flex-col gap-1.5 min-w-[160px]">
+          <label htmlFor="shipFilter" className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+            Ship ID
+          </label>
+          <select
+            id="shipFilter"
+            value={selectedShip}
+            onChange={(e) => onShipChange(e.target.value)}
+            className="border border-gray-300 bg-white text-gray-700 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"
+          >
+            <option value="">All Ships</option>
+            {shipIds.map((id) => (
+              <option key={id} value={id}>{id}</option>
+            ))}
+          </select>
+        </div>
+
         <div className="flex flex-col gap-1.5 min-w-[160px]">
           <label htmlFor="vesselFilter" className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
             Vessel Type

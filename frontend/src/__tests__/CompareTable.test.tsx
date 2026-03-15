@@ -5,6 +5,7 @@ import { ComparisonTable, ComparisonData } from '../adapters/ui/components/compa
 const mockComparisons: ComparisonData[] = [
   {
     routeId: 'R001',
+    shipId: 'SHIP001',
     vesselType: 'Container',
     fuelType: 'HFO',
     year: 2024,
@@ -20,6 +21,7 @@ const mockComparisons: ComparisonData[] = [
   },
   {
     routeId: 'R002',
+    shipId: 'SHIP002',
     vesselType: 'Container',
     fuelType: 'HFO',
     year: 2024,
@@ -35,6 +37,7 @@ const mockComparisons: ComparisonData[] = [
   },
   {
     routeId: 'R003',
+    shipId: 'SHIP003',
     vesselType: 'Container',
     fuelType: 'HFO',
     year: 2024,

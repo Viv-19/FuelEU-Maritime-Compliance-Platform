@@ -1,16 +1,21 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { bankSurplus } from '../../../core/application/BankSurplus';
-import { applyBanked } from '../../../core/application/ApplyBanked';
+import { pool } from '../../../infrastructure/db/postgres';
 
-const BANKING_SCHEMA = z.object({
+const BANK_SCHEMA = z.object({
   shipId: z.string().min(1),
   year: z.number().int().min(2000),
-  amount: z.number()
+  amount: z.number().positive()
 });
 
-export const bank = (req: Request, res: Response): void => {
-  const result = BANKING_SCHEMA.safeParse(req.body);
+const APPLY_SCHEMA = z.object({
+  fromShipId: z.string().min(1),
+  toShipId: z.string().min(1),
+  amount: z.number().positive()
+});
+
+export const bank = async (req: Request, res: Response): Promise<void> => {
+  const result = BANK_SCHEMA.safeParse(req.body);
 
   if (!result.success) {
     res.status(400).json({
@@ -21,16 +26,19 @@ export const bank = (req: Request, res: Response): void => {
     return;
   }
 
-  const { shipId, amount } = result.data;
-  const currentBankedAmount = 0; // Mock current bank in DB
+  const { shipId, year, amount } = result.data;
 
   try {
-    const newBankedAmount = bankSurplus(amount, currentBankedAmount);
+    await pool.query(
+      `INSERT INTO bank_entries (ship_id, year, amount_gco2eq) VALUES ($1, $2, $3)`,
+      [shipId, year, amount]
+    );
+
     res.status(200).json({
       success: true,
       data: {
         shipId,
-        bankedAmount: newBankedAmount
+        bankedAmount: amount
       }
     });
   } catch (error: any) {
@@ -41,8 +49,8 @@ export const bank = (req: Request, res: Response): void => {
   }
 };
 
-export const apply = (req: Request, res: Response): void => {
-  const result = BANKING_SCHEMA.safeParse(req.body);
+export const apply = async (req: Request, res: Response): Promise<void> => {
+  const result = APPLY_SCHEMA.safeParse(req.body);
 
   if (!result.success) {
     res.status(400).json({
@@ -53,19 +61,17 @@ export const apply = (req: Request, res: Response): void => {
     return;
   }
 
-  const { amount } = result.data;
-  const currentBankedAmount = 5000; // Mock available banked amount
+  const { fromShipId, toShipId, amount } = result.data;
+  const year = 2024; // Defaulting to 2024 for this simple example application unless passed
 
   try {
-    // applyBanked expects a negative deficitCB, frontend sends positive amount
-    const applyResult = applyBanked(-Math.abs(amount), currentBankedAmount);
+    await pool.query(
+      `INSERT INTO transfers (from_ship_id, to_ship_id, year, amount) VALUES ($1, $2, $3, $4)`,
+      [fromShipId, toShipId, year, amount]
+    );
+
     res.status(200).json({
       success: true,
-      data: {
-        applied: applyResult.applied,
-        newCB: applyResult.newCB,
-        remainingBank: applyResult.remainingBank
-      }
     });
   } catch (error: any) {
     res.status(400).json({

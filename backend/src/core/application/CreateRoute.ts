@@ -6,6 +6,7 @@ export class CreateRoute {
 
   async execute(dto: {
     routeId: string;
+    shipId: string;
     vesselType: string;
     fuelType: string;
     year: number;
@@ -22,6 +23,7 @@ export class CreateRoute {
     
     const route = new Route(
       dto.routeId,
+      dto.shipId,
       dto.vesselType,
       dto.fuelType,
       dto.year,

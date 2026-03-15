@@ -1,0 +1,1919 @@
+﻿
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/vives/OneDrive/Desktop/full stack developer/Varuna/FuelEU-Maritime-Compliance-Platform/frontend[39m
+
+ [32mΓ£ô[39m src/__tests__/ApplyButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 119[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/BankButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 108[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolSummary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolMemberList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/CompareTable.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 163[2mms[22m[39m
+node.exe : [90mstderr[2m | 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22m[2mPoolingPage[2m > [22m[2mloads and displays 
+ship compliance data
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([90mstderr 
+   [2m...compliance data:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [32mΓ£ô[39m src/__tests__/RoutesTable.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 253[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/BankingPage.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 457[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/RoutesPage.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 633[2mms[22m[39m
+   [33m[2mΓ£ô[22m[39m RoutesPage[2m > [22mfetches and renders routes data on load [33m 347[2mms[22m[39m
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mshows valid pool 
+when total CB >= 0
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [32mΓ£ô[39m src/__tests__/ComparisonChart.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 90[2mms[22m[39m
+[90mstderr[2m | src/__tests__/ComparePage.test.tsx[2m 
+> [22m[2mComparePage[2m > [22m[2mfetches and 
+processes comparison data correctly
+[22m[39mThe width(-1) and height(-1) of chart should be 
+greater than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+
+ [32mΓ£ô[39m src/__tests__/App.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 152[2mms[22m[39m
+[90mstderr[2m | src/__tests__/TabLayout.test.tsx[2m > 
+[22m[2mTabLayout Navigation[2m > [22m[2mnavigates to 
+different route upon tab click
+[22m[39mError: Uncaught [Error: useRoutes must be used 
+within a RoutesProvider]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+Error: useRoutes must be used within a RoutesProvider
+    at useRoutes 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\context\RoutesContext.tsx:78:11[90m)[39m
+    at RoutesPage 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\RoutesPage.tsx:31:95[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+    at HTMLUnknownElementImpl._dispatch 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:233:9[90m)[39m
+Error: Uncaught [Error: useRoutes must be used within a 
+RoutesProvider]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+Error: useRoutes must be used within a RoutesProvider
+    at useRoutes 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\context\RoutesContext.tsx:78:11[90m)[39m
+    at RoutesPage 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\RoutesPage.tsx:31:95[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+    at HTMLUnknownElementImpl._dispatch 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:233:9[90m)[39m
+The above error occurred in the <RoutesPage> component:
+
+    at RoutesPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\RoutesPage.tsx:44:130)
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [31mΓ¥»[39m src/__tests__/TabLayout.test.tsx [2m([22m[2m2 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 176[2mms[22m[39m
+   [32mΓ£ô[39m TabLayout Navigation[2m > [22mrenders all tab links[32m 124[2mms[22m[39m
+[31m   [31m├ù[31m TabLayout Navigation[2m > [22mnavigates to different route upon tab click[39m[32m 49[2mms[22m[39m
+[31m     ΓåÆ useRoutes must be used within a RoutesProvider[39m
+ [32mΓ£ô[39m src/__tests__/ComparePage.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 236[2mms[22m[39m
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mshows invalid pool 
+when total CB < 0
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mcreates pool and 
+updates cb_after values
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mhandles API errors 
+gracefully
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [31mΓ¥»[39m src/__tests__/PoolingPage.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[33m 5108[2mms[22m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mloads and displays ship compliance data[39m[33m 1044[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Ship-A. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mshows valid pool when total CB >= 0[39m[33m 1011[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Valid Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mshows invalid pool when total CB < 0[39m[33m 1018[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Invalid Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mcreates pool and updates cb_after values[39m[33m 1011[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Create Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mhandles API errors gracefully[39m[33m 1021[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: /Server down/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Failed Tests 6 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mloads and displays ship 
+compliance data
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Ship-A. This could be because 
+the text is broken up by multiple elements. In this case, 
+you can provide a function for your text matcher to make 
+your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m46:11[22m[39m
+    [90m 44| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 45| [39m
+    [90m 46| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 47| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Ship-A'[39m))[33m.[39m[34mt
+oBeInTheDocument[39m()[33m;[39m
+    [90m 48| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Ship-B'[39m))[33m.[39m[34mt
+oBeInTheDocument[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/6]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mshows valid pool when total 
+CB >= 0
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Valid Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m60:11[22m[39m
+    [90m 58| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 59| [39m
+    [90m 60| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 61| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Valid Pool'[39m))[33m.[39m[
+34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 62| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create Pool'[39m))[33m.[39mn
+ot[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/6]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mshows invalid pool when total 
+CB < 0
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Invalid Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m77:11[22m[39m
+    [90m 75| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 76| [39m
+    [90m 77| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 78| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Invalid Pool'[39m))[33m.[39m
+[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 79| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create 
+Pool'[39m))[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[3/6]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mcreates pool and updates 
+cb_after values
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Create Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m91:11[22m[39m
+    [90m 89| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 90| [39m
+    [90m 91| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 92| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create Pool'[39m))[33m.[39mn
+ot[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+    [90m 93| [39m    })[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[4/6]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mhandles API errors gracefully
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: /Server down/i. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m110:11[22m[39m
+    [90m108| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m109| [39m
+    [90m110| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m111| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([36m/Server down/i[39m))[33m.[39m
+[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m112| [39m    })[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[5/6]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/TabLayout.test.tsx[2m > [22mTabLayout 
+Navigation[2m > [22mnavigates to different route upon 
+tab click
+[31m[1mError[22m: useRoutes must be used within a 
+RoutesProvider[39m
+[36m [2mΓ¥»[22m useRoutes src/adapters/ui/context/Route
+sContext.tsx:[2m78:11[22m[39m
+    [90m 76| [39m  [35mconst[39m context [33m=[39m 
+[34museContext[39m([33mRoutesContext[39m)[33m;[39m
+    [90m 77| [39m  [35mif[39m (context [33m===[39m 
+undefined) {
+    [90m 78| [39m    [35mthrow[39m [35mnew[39m 
+[33mError[39m([32m'useRoutes must be used within a 
+RoutesProvider'[39m)[33m;[39m
+    [90m   | [39m          [31m^[39m
+    [90m 79| [39m  }
+    [90m 80| [39m  [35mreturn[39m context[33m;[39m
+[90m [2mΓ¥»[22m RoutesPage 
+src/adapters/ui/RoutesPage.tsx:[2m31:95[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+[90m [2mΓ¥»[22m recoverFromConcurrentError node_modules
+/react-dom/cjs/react-dom.development.js:[2m25889:20[22m
+[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[6/6]ΓÄ»[22m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Unhandled Errors 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1m
+Vitest caught 5 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled 
+errors to make sure your tests are not affected.[22m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mloads and displays ship compliance data[22m". It 
+might mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mshows valid pool when total CB >= 0[22m". It might 
+mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mshows invalid pool when total CB < 0[22m". It might 
+mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mcreates pool and updates cb_after values[22m". It 
+might mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mhandles API errors gracefully[22m". It might mean 
+one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m11 passed[39m[22m[90m (13)[39m
+[2m      Tests [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m38 passed[39m[22m[90m (44)[39m
+[2m     Errors [22m [1m[31m5 errors[39m[22m
+[2m   Start at [22m 08:18:04
+[2m   Duration [22m 10.25s[2m (transform 2.02s, setup 4.63s, collect 15.80s, tests 7.84s, environment 31.15s, prepare 11.72s)[22m
+

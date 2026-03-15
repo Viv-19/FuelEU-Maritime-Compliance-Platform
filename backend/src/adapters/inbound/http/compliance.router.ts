@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { getCb, getAdjustedCb } from './compliance.controller';
+import { getAllCb, getCb } from './compliance.controller';
 
 const router = Router();
 
 router.get('/cb', getCb);
-router.get('/adjusted-cb', getAdjustedCb);
+router.get('/cb/all', getAllCb);
 
 export { router as complianceRouter };

@@ -1,6 +1,7 @@
 export class Route {
   constructor(
     public readonly routeId: string,
+    public readonly shipId: string,
     public readonly vesselType: string,
     public readonly fuelType: string,
     public readonly year: number,
@@ -11,12 +12,16 @@ export class Route {
     public readonly isBaseline: boolean
   ) {
     this.routeId = routeId.toUpperCase();
+    this.shipId = shipId.toUpperCase();
     this.validate();
   }
 
   private validate(): void {
     if (!this.routeId || this.routeId.trim() === '') {
       throw new Error('routeId must not be empty');
+    }
+    if (!this.shipId || this.shipId.trim() === '') {
+      throw new Error('shipId must not be empty');
     }
     const routeIdRegex = /^R[0-9]{3}$/;
     if (!routeIdRegex.test(this.routeId)) {

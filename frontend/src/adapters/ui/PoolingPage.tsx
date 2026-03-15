@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { apiGet, apiPost } from '../infrastructure/apiClient';
+import { useRoutes } from './context/RoutesContext';
 import { PoolMember } from '../../core/domain/PoolMember';
 import { PoolMemberList } from './PoolMemberList';
 import { PoolSummary } from './PoolSummary';
@@ -8,6 +9,7 @@ import { CreatePoolButton } from './CreatePoolButton';
 const DEFAULT_YEAR = 2024;
 
 export const PoolingPage: React.FC = () => {
+  const { selectedShipId } = useRoutes();
   const [members, setMembers] = useState<PoolMember[]>([]);
   const [year] = useState<number>(DEFAULT_YEAR);
   const [loading, setLoading] = useState<boolean>(true);
@@ -34,24 +36,30 @@ export const PoolingPage: React.FC = () => {
     fetchMembers();
   }, []);
 
-  const totalCBBefore = useMemo(() => members.reduce((sum, m) => sum + m.cb_before, 0), [members]);
+  // Apply global ship filter
+  const filteredMembers = useMemo(() => {
+    if (!selectedShipId) return members;
+    return members.filter((m) => m.shipId === selectedShipId);
+  }, [members, selectedShipId]);
+
+  const totalCBBefore = useMemo(() => filteredMembers.reduce((sum, m) => sum + m.cb_before, 0), [filteredMembers]);
   const totalCBAfter = useMemo(() => {
-    const hasAfter = members.some(m => m.cb_after != null);
+    const hasAfter = filteredMembers.some(m => m.cb_after != null);
     if (!hasAfter) return null;
-    return members.reduce((sum, m) => sum + (m.cb_after ?? m.cb_before), 0);
-  }, [members]);
+    return filteredMembers.reduce((sum, m) => sum + (m.cb_after ?? m.cb_before), 0);
+  }, [filteredMembers]);
 
   const poolValid = useMemo(() => {
-    if (members.length === 0) return false;
+    if (filteredMembers.length === 0) return false;
     return totalCBBefore >= 0;
-  }, [members, totalCBBefore]);
+  }, [filteredMembers, totalCBBefore]);
 
   const handleCreatePool = async () => {
     try {
       setError(null);
       const payload = {
         year,
-        members: members.map(m => ({ shipId: m.shipId, cb_before: m.cb_before }))
+        members: filteredMembers.map(m => ({ shipId: m.shipId, cb_before: m.cb_before }))
       };
       const res = await apiPost('/pools', payload);
       if (res.success && Array.isArray(res.data)) {
@@ -86,7 +94,7 @@ export const PoolingPage: React.FC = () => {
             poolValid={poolValid}
           />
 
-          <PoolMemberList members={members} />
+          <PoolMemberList members={filteredMembers} />
 
           <div className="flex gap-4 items-center">
             <CreatePoolButton

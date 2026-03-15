@@ -50,7 +50,7 @@ export const ComplianceDonutChart: React.FC<ComplianceDonutChartProps> = ({
               dataKey="value"
               stroke="none"
             >
-              {data.map((entry, index) => (
+              {data.map((_entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>

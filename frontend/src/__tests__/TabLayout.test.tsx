@@ -1,9 +1,16 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { TabLayout } from '../shared/components/TabLayout';
 import { RoutesPage } from '../adapters/ui/RoutesPage';
 import { ComparePage } from '../adapters/ui/ComparePage';
+import { RoutesProvider } from '../adapters/ui/context/RoutesContext';
+import * as apiClient from '../adapters/infrastructure/apiClient';
+
+vi.mock('../adapters/infrastructure/apiClient', () => ({
+  apiGet: vi.fn(),
+  apiPost: vi.fn(),
+}));
 
 describe('TabLayout Navigation', () => {
   it('renders all tab links', () => {
@@ -23,14 +30,18 @@ describe('TabLayout Navigation', () => {
   });
 
   it('navigates to different route upon tab click', () => {
+    vi.mocked(apiClient.apiGet).mockResolvedValue({ success: true, data: [] });
+
     render(
       <MemoryRouter initialEntries={['/routes']}>
-        <TabLayout>
-          <Routes>
-            <Route path="/routes" element={<RoutesPage />} />
-            <Route path="/compare" element={<ComparePage />} />
-          </Routes>
-        </TabLayout>
+        <RoutesProvider>
+          <TabLayout>
+            <Routes>
+              <Route path="/routes" element={<RoutesPage />} />
+              <Route path="/compare" element={<ComparePage />} />
+            </Routes>
+          </TabLayout>
+        </RoutesProvider>
       </MemoryRouter>
     );
 

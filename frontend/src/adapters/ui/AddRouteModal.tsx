@@ -10,6 +10,7 @@ interface AddRouteModalProps {
 
 interface FieldErrors {
   routeId?: string;
+  shipId?: string;
   ghgIntensity?: string;
   fuelConsumption?: string;
   distance?: string;
@@ -18,6 +19,7 @@ interface FieldErrors {
 export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, onSuccess, showToast }) => {
   const [formData, setFormData] = useState({
     routeId: '',
+    shipId: '',
     vesselType: 'Container',
     fuelType: 'HFO',
     year: new Date().getFullYear(),
@@ -34,6 +36,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     if (isOpen) {
       setFormData({
         routeId: '',
+        shipId: '',
         vesselType: 'Container',
         fuelType: 'HFO',
         year: new Date().getFullYear(),
@@ -68,7 +71,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: name === 'routeId' ? value.toUpperCase() : value
+      [name]: (name === 'routeId' || name === 'shipId') ? value.toUpperCase() : value
     }));
     setTouched(prev => ({ ...prev, [name]: true }));
   };
@@ -85,6 +88,10 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
       errors.routeId = 'Route ID is required';
     } else if (!/^R[0-9]{3}$/.test(formData.routeId)) {
       errors.routeId = 'Route ID must follow format R001';
+    }
+
+    if (!formData.shipId.trim()) {
+      errors.shipId = 'Ship ID is required';
     }
 
     if (formData.ghgIntensity !== '' && Number(formData.ghgIntensity) <= 0) {
@@ -114,7 +121,7 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
     e.preventDefault();
 
     // Mark all fields as touched
-    setTouched({ routeId: true, ghgIntensity: true, fuelConsumption: true, distance: true });
+    setTouched({ routeId: true, shipId: true, ghgIntensity: true, fuelConsumption: true, distance: true });
 
     if (!isFormValid) {
       return;
@@ -175,20 +182,37 @@ export const AddRouteModal: React.FC<AddRouteModalProps> = ({ isOpen, onClose, o
         )}
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Route ID</label>
-            <input
-              type="text"
-              name="routeId"
-              value={formData.routeId}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={getInputClass('routeId')}
-              placeholder="e.g. R006"
-            />
-            {touched.routeId && fieldErrors.routeId && (
-              <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.routeId}</p>
-            )}
+          <div className="grid grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Route ID</label>
+              <input
+                type="text"
+                name="routeId"
+                value={formData.routeId}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={getInputClass('routeId')}
+                placeholder="e.g. R006"
+              />
+              {touched.routeId && fieldErrors.routeId && (
+                <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.routeId}</p>
+              )}
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Ship ID</label>
+              <input
+                type="text"
+                name="shipId"
+                value={formData.shipId}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={getInputClass('shipId')}
+                placeholder="e.g. SHIP001"
+              />
+              {touched.shipId && fieldErrors.shipId && (
+                <p className="mt-1 text-xs text-red-600 font-medium">{fieldErrors.shipId}</p>
+              )}
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-5">

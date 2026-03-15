@@ -79,6 +79,7 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
           <thead className="bg-gray-50">
             <tr>
               <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Route ID</th>
+              <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Ship ID</th>
               <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Vessel Type</th>
               <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Fuel Type</th>
               <th scope="col" className="px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600">Year</th>
@@ -104,6 +105,7 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
             {loading ? (
               Array.from({ length: 5 }).map((_, idx) => (
                 <tr key={`skeleton-${idx}`}>
+                  <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-16"></div></td>
                   <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-16"></div></td>
                   <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div></td>
                   <td className="px-4 py-4 whitespace-nowrap"><div className="h-4 bg-gray-200 rounded animate-pulse w-20"></div></td>
@@ -143,6 +145,7 @@ export const RoutesTable: React.FC<RoutesTableProps> = ({
                     onClick={() => onRowClick && onRowClick(route)}
                   >
                   <td className="px-4 py-4 whitespace-nowrap font-medium text-gray-900">{route.routeId}</td>
+                  <td className="px-4 py-4 whitespace-nowrap font-medium text-gray-900">{route.shipId}</td>
                   <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.vesselType}</td>
                   <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.fuelType}</td>
                   <td className="px-4 py-4 whitespace-nowrap text-gray-600">{route.year}</td>

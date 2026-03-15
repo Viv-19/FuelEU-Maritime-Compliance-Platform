@@ -7,6 +7,7 @@ export class SqlRouteRepository implements RouteRepository {
     const result = await query(
       `INSERT INTO routes (
         route_id,
+        ship_id,
         vessel_type,
         fuel_type,
         year,
@@ -15,10 +16,11 @@ export class SqlRouteRepository implements RouteRepository {
         distance,
         total_emissions,
         is_baseline
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
       RETURNING *`,
       [
         route.routeId,
+        route.shipId,
         route.vesselType,
         route.fuelType,
         route.year,
@@ -57,6 +59,7 @@ export class SqlRouteRepository implements RouteRepository {
   private mapToDomain(row: any): Route {
     return new Route(
       row.route_id,
+      row.ship_id,
       row.vessel_type,
       row.fuel_type,
       Number(row.year),

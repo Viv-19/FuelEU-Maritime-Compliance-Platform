@@ -20,6 +20,7 @@ export const CompareDashboard: React.FC<CompareDashboardProps> = ({ routes }) =>
   // Filters state
   const [filters, setFilters] = useState<CompareFilterState>({
     search: '',
+    shipId: '',
     vesselType: '',
     fuelType: '',
     year: '',
@@ -28,6 +29,7 @@ export const CompareDashboard: React.FC<CompareDashboardProps> = ({ routes }) =>
   });
 
   // Extract unique values for filter dropdowns
+  const shipIds = useMemo(() => Array.from(new Set(routes.map(r => r.shipId))).filter(Boolean).sort() as string[], [routes]);
   const vesselTypes = useMemo(() => Array.from(new Set(routes.map(r => r.vesselType))).filter(Boolean) as string[], [routes]);
   const fuelTypes = useMemo(() => Array.from(new Set(routes.map(r => r.fuelType))).filter(Boolean) as string[], [routes]);
   const years = useMemo(() => Array.from(new Set(routes.map(r => r.year))).filter(Boolean).sort((a, b) => b - a) as number[], [routes]);
@@ -55,6 +57,9 @@ export const CompareDashboard: React.FC<CompareDashboardProps> = ({ routes }) =>
     // Apply Filters
     if (filters.search) {
       result = result.filter(r => r.routeId.toLowerCase().includes(filters.search.toLowerCase()));
+    }
+    if (filters.shipId) {
+      result = result.filter(r => r.shipId === filters.shipId);
     }
     if (filters.vesselType) {
       result = result.filter(r => r.vesselType === filters.vesselType);
@@ -114,6 +119,7 @@ export const CompareDashboard: React.FC<CompareDashboardProps> = ({ routes }) =>
       <CompareFilters 
         filters={filters} 
         setFilters={setFilters} 
+        shipIds={shipIds}
         vesselTypes={vesselTypes} 
         fuelTypes={fuelTypes} 
         years={years} 

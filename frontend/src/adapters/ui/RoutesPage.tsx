@@ -1,36 +1,36 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Route } from '../../core/domain/Route';
-import { apiGet, apiPost } from '../infrastructure/apiClient';
+import { apiPost } from '../infrastructure/apiClient';
+import { useRoutes } from './context/RoutesContext';
+import { aggregateShips } from '../../shared/utils/shipAggregation';
 import { RouteFilters } from './RouteFilters';
 import { RoutesTable } from './RoutesTable';
 import { AddRouteModal } from './AddRouteModal';
 import { RouteDetailsDrawer } from './RouteDetailsDrawer';
-
-const TARGET_INTENSITY = 89.3368;
 
 interface KpiCardProps {
   icon: string;
   title: string;
   value: string | number;
   accent?: string;
+  subtitle?: string;
 }
 
-const KpiCard: React.FC<KpiCardProps> = ({ icon, title, value, accent = 'text-gray-900' }) => (
+const KpiCard: React.FC<KpiCardProps> = ({ icon, title, value, accent = 'text-gray-900', subtitle }) => (
   <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md">
     <div className="text-2xl">{icon}</div>
     <div>
       <p className="text-sm text-gray-500 font-medium">{title}</p>
       <p className={`text-2xl font-semibold ${accent} mt-0.5`}>{value}</p>
+      {subtitle && <p className="text-xs text-gray-400 mt-1">{subtitle}</p>}
     </div>
   </div>
 );
 
 export const RoutesPage: React.FC = () => {
-  const [routes, setRoutes] = useState<Route[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const { routes, loading, error, fetchRoutes, selectedShipId, setSelectedShipId, shipIds } = useRoutes();
 
-  // Filter States
+  // Local filter states
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [debouncedQuery, setDebouncedQuery] = useState<string>('');
   const [selectedVessel, setSelectedVessel] = useState<string>('');
@@ -39,11 +39,10 @@ export const RoutesPage: React.FC = () => {
   const [resetSortTrigger, setResetSortTrigger] = useState<number>(0);
 
   // Debounce search query
-  useEffect(() => {
+  React.useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedQuery(searchQuery);
-    }, 300); // 300ms debounce for real time filtering
-
+    }, 300);
     return () => clearTimeout(handler);
   }, [searchQuery]);
 
@@ -56,51 +55,14 @@ export const RoutesPage: React.FC = () => {
     setTimeout(() => setToastMessage(null), 3000);
   };
 
-  const isMounted = React.useRef(true);
-
-  React.useEffect(() => {
-    isMounted.current = true;
-    return () => {
-      isMounted.current = false;
-    };
-  }, []);
-
-  const fetchRoutes = async () => {
-    try {
-      if (!isMounted.current) return;
-      setLoading(true);
-      setError(null);
-      const res = await apiGet('/routes');
-      if (res.success && Array.isArray(res.data)) {
-        setRoutes(res.data);
-      } else {
-        throw new Error('Invalid response format');
-      }
-    } catch (err: any) {
-      if (!isMounted.current) return;
-      setError('Failed to load routes');
-    } finally {
-      if (isMounted.current) {
-        setLoading(false);
-      }
-    }
-  };
-
-  useEffect(() => {
-    fetchRoutes();
-  }, []);
-
   const handleSetBaseline = async (routeId: string) => {
     try {
-      setError(null);
       const res = await apiPost(`/routes/${routeId}/baseline`, {});
-      if (res.success && Array.isArray(res.data)) {
-        setRoutes(res.data);
-      } else {
+      if (res.success) {
         await fetchRoutes();
       }
     } catch (err: any) {
-      setError(err.message || 'Failed to set baseline.');
+      // Error handled via context
     }
   };
 
@@ -116,8 +78,8 @@ export const RoutesPage: React.FC = () => {
     setSelectedVessel('');
     setSelectedFuel('');
     setSelectedYear('');
+    setSelectedShipId('');
     setResetSortTrigger((prev) => prev + 1);
-    fetchRoutes();
   };
 
   // Derive unique filter options from the full dataset
@@ -128,28 +90,42 @@ export const RoutesPage: React.FC = () => {
   // Apply filters linearly
   const filteredRoutes = useMemo(() => {
     return routes.filter(route => {
+      if (selectedShipId && route.shipId !== selectedShipId) return false;
       if (debouncedQuery && !route.routeId.toLowerCase().includes(debouncedQuery.toLowerCase())) return false;
       if (selectedVessel && route.vesselType !== selectedVessel) return false;
       if (selectedFuel && route.fuelType !== selectedFuel) return false;
       if (selectedYear && route.year.toString() !== selectedYear) return false;
       return true;
     });
-  }, [routes, debouncedQuery, selectedVessel, selectedFuel, selectedYear]);
+  }, [routes, selectedShipId, debouncedQuery, selectedVessel, selectedFuel, selectedYear]);
 
-  // KPI calculations
-  const surplusCount = useMemo(() => routes.filter(r => r.ghgIntensity <= TARGET_INTENSITY).length, [routes]);
-  const deficitCount = useMemo(() => routes.filter(r => r.ghgIntensity > TARGET_INTENSITY).length, [routes]);
+  // Ship-level KPI calculations (Part 1 fix — count unique ships, not routes)
+  const shipAggregates = useMemo(() => aggregateShips(routes), [routes]);
+
+  const totalShips = useMemo(() => shipAggregates.length, [shipAggregates]);
+  const surplusShips = useMemo(() => shipAggregates.filter(s => s.status === 'Surplus').length, [shipAggregates]);
+  const deficitShips = useMemo(() => shipAggregates.filter(s => s.status === 'Deficit').length, [shipAggregates]);
   const avgGhg = useMemo(() => {
     if (routes.length === 0) return '—';
     return (routes.reduce((sum, r) => sum + r.ghgIntensity, 0) / routes.length).toFixed(2);
   }, [routes]);
 
+  // Part 14 — Fleet Compliance Indicator
+  const totalFleetCB = useMemo(() => shipAggregates.reduce((sum, s) => sum + s.totalCB, 0), [shipAggregates]);
+
+  // Part 14 — Most Efficient Ship
+  const mostEfficientShip = useMemo(() => {
+    if (shipAggregates.length === 0) return null;
+    return shipAggregates.reduce((best, s) => (s.avgIntensity < best.avgIntensity ? s : best), shipAggregates[0]);
+  }, [shipAggregates]);
+
   const handleExportCSV = useCallback(() => {
-    const headers = ['routeId', 'vesselType', 'fuelType', 'year', 'ghgIntensity', 'fuelConsumption', 'distance', 'totalEmissions'];
+    const headers = ['routeId', 'shipId', 'vesselType', 'fuelType', 'year', 'ghgIntensity', 'fuelConsumption', 'distance', 'totalEmissions'];
     const csvRows = [
       headers.join(','),
       ...filteredRoutes.map(r => [
         r.routeId,
+        r.shipId,
         r.vesselType,
         r.fuelType,
         r.year,
@@ -235,12 +211,49 @@ export const RoutesPage: React.FC = () => {
 
       {/* KPI Cards */}
       {!loading && routes.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <KpiCard icon="🚢" title="Total Routes" value={routes.length} />
-          <KpiCard icon="📈" title="Surplus Ships" value={surplusCount} accent="text-green-700" />
-          <KpiCard icon="⚠️" title="Deficit Ships" value={deficitCount} accent="text-red-700" />
-          <KpiCard icon="🌍" title="Avg GHG Intensity" value={avgGhg} accent="text-blue-700" />
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <KpiCard icon="🚢" title="Total Ships" value={totalShips} />
+            <KpiCard icon="📈" title="Surplus Ships" value={surplusShips} accent="text-green-700" />
+            <KpiCard icon="⚠️" title="Deficit Ships" value={deficitShips} accent="text-red-700" />
+            <KpiCard icon="🌍" title="Fleet Avg GHG Intensity" value={avgGhg} accent="text-blue-700" />
+          </div>
+
+          {/* Part 14 — Additional Analytics */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-md">
+              <div className="text-2xl">🏦</div>
+              <div className="flex-1">
+                <p className="text-sm text-gray-500 font-medium">Fleet Compliance Balance</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <p className={`text-2xl font-semibold ${totalFleetCB >= 0 ? 'text-green-700' : 'text-red-700'}`}>
+                    {totalFleetCB >= 0 ? '+' : ''}{totalFleetCB.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                  </p>
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                    totalFleetCB >= 0
+                      ? 'bg-green-100 text-green-800'
+                      : 'bg-red-100 text-red-800'
+                  }`}>
+                    {totalFleetCB >= 0 ? 'COMPLIANT' : 'NON-COMPLIANT'}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {mostEfficientShip && (
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-md">
+                <div className="text-2xl">⭐</div>
+                <div>
+                  <p className="text-sm text-gray-500 font-medium">Most Efficient Ship</p>
+                  <p className="text-2xl font-semibold text-blue-700 mt-0.5">{mostEfficientShip.shipId}</p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    Avg GHG: {mostEfficientShip.avgIntensity.toFixed(2)} · {mostEfficientShip.routesCount} route{mostEfficientShip.routesCount > 1 ? 's' : ''}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </>
       )}
 
       {/* Filters */}
@@ -248,6 +261,9 @@ export const RoutesPage: React.FC = () => {
         <RouteFilters
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
+          shipIds={shipIds}
+          selectedShip={selectedShipId}
+          onShipChange={setSelectedShipId}
           vesselTypes={vesselTypes}
           fuelTypes={fuelTypes}
           years={years}

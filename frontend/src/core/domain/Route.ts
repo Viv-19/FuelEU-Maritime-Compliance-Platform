@@ -1,5 +1,6 @@
 export interface Route {
   routeId: string;
+  shipId: string;
   vesselType: string;
   fuelType: string;
   year: number;

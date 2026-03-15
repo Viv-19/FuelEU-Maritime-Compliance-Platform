@@ -1,0 +1,3949 @@
+﻿
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/vives/OneDrive/Desktop/full stack developer/Varuna/FuelEU-Maritime-Compliance-Platform/frontend[39m
+
+ [32mΓ£ô[39m src/__tests__/BankButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 111[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/CompareTable.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 147[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolSummary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 177[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/PoolMemberList.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/ApplyButton.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+node.exe : [90mstderr[2m | 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22m[2mPoolingPage[2m > [22m[2mloads and displays 
+ship compliance data
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([90mstderr 
+   [2m...compliance data:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [32mΓ£ô[39m src/__tests__/RoutesTable.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 323[2mms[22m[39m
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mshows valid pool 
+when total CB >= 0
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [32mΓ£ô[39m src/__tests__/ComparisonChart.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 77[2mms[22m[39m
+ [31mΓ¥»[39m src/__tests__/BankingPage.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1202[2mms[22m[39m
+[31m   [31m├ù[31m BankingPage[2m > [22mloads and displays ship data derived from routes[39m[33m 1073[2mms[22m[39m
+[31m     ΓåÆ Found multiple elements with the text: SHIP001
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<option[31m
+  [33mvalue[31m=[32m"SHIP001"[31m
+[36m>[31m
+  [0mSHIP001[0m
+[36m</option>[31m
+
+Ignored nodes: comments, script, style
+[36m<td[31m
+  [33mclass[31m=[32m"px-4 py-4 whitespace-nowrap font-medium text-gray-900"[31m
+[36m>[31m
+  [0mSHIP001[0m
+[36m</td>[31m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"flex flex-col gap-6"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex items-center justify-between"[31m
+      [36m>[31m
+        [36m<div>[31m
+          [36m<h2[31m
+            [33mclass[31m=[32m"text-2xl font-bold text-gray-900"[31m
+          [36m>[31m
+            [0mCompliance Banking[0m
+          [36m</h2>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-gray-500 mt-1"[31m
+          [36m>[31m
+            [0mBank surplus credits and manage ship compliance balances.[0m
+          [36m</p>[31m
+        [36m</div>[31m
+        [36m<button[31m
+          [33mclass[31m=[32m"bg-blue-600 border border-transparent rounded-md py-2 px-4 shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"[31m
+        [36m>[31m
+          [0mTransfer Credits[0m
+        [36m</button>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"text-2xl"[31m
+          [36m>[31m
+            [0m≡ƒÜó[0m
+          [36m</div>[31m
+          [36m<div>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+            [36m>[31m
+              [0mTotal Ships[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-2xl font-semibold text-gray-900 mt-0.5"[31m
+            [36m>[31m
+              [0m2[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"text-2xl"[31m
+          [36m>[31m
+            [0m≡ƒôê[0m
+          [36m</div>[31m
+          [36m<div>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+            [36m>[31m
+              [0mSurplus Ships[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-2xl font-semibold text-green-700 mt-0.5"[31m
+            [36m>[31m
+              [0m1[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"text-2xl"[31m
+          [36m>[31m
+            [0mΓÜá∩╕Å[0m
+          [36m</div>[31m
+          [36m<div>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+            [36m>[31m
+              [0mDeficit Ships[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-2xl font-semibold text-red-700 mt-0.5"[31m
+            [36m>[31m
+              [0m1[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"text-2xl"[31m
+          [36m>[31m
+            [0m≡ƒÅª[0m
+          [36m</div>[31m
+          [36m<div>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+            [36m>[31m
+              [0mTotal Fleet Credits[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-2xl font-semibold text-blue-700 mt-0.5"[31m
+            [36m>[31m
+              [0m+88,90,44,000[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"bg-white border border-gray-200 rounded-xl p-4 shadow-sm"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-wrap gap-4 items-end"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col gap-1.5 min-w-[160px]"[31m
+          [36m>[31m
+            [36m<label[31m
+              [33mclass[31m=[32m"text-xs font-semibold text-gray-500 uppercase tracking-wide"[31m
+              [33mfor[31m=[32m"bankingShipFilter"[31m
+            [36m>[31m
+              [0mShip ID[0m
+            [36m</label>[31m
+            [36m<select[31m
+              [33mclass[31m=[32m"border border-gray-300 bg-white text-gray-700 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"[31m
+              [33mid[31m=[32m"bankingShipFilter"[31m
+            [36m>[31m
+              [36m<option[31m
+                [33mvalue[31m=[32m""[31m
+              [36m>[31m
+                [0mAll Ships[0m
+              [36m</option>[31m
+              [36m<option[31m
+                [33mvalue[31m=[32m"SHIP001"[31m
+              [36m>[31m
+                [0mSHIP001[0m
+              [36m</option>[31m
+              [36m<option[31m
+                [33mvalue[31m=[32m"SHIP002"[31m
+              [36m>[31m
+                [0mSHIP002[0m
+              [36m</option>[31m
+            [36m</select>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col gap-1.5 min-w-[140px]"[31m
+          [36m>[31m
+            [36m<label[31m
+              [33mclass[31m=[32m"text-xs font-semibold text-gray-500 uppercase tracking-wide"[31m
+              [33mfor[31m=[32m"bankingStatusFilter"[31m
+            [36m>[31m
+              [0mStatus[0m
+            [36m</label>[31m
+            [36m<select[31m
+              [33mclass[31m=[32m"border border-gray-300 bg-white text-gray-700 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"[31m
+              [33mid[31m=[32m"bankingStatusFilter"[31m
+            [36m>[31m
+              [36m<option[31m
+                [33mvalue[31m=[32m""[31m
+              [36m>[31m
+                [0mAll[0m
+              [36m</option>[31m
+              [36m<option[31m
+                [33mvalue[31m=[32m"Surplus"[31m
+          ...
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col gap-6"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex items-center justify-between"[31m
+        [36m>[31m
+          [36m<div>[31m
+            [36m<h2[31m
+              [33mclass[31m=[32m"text-2xl font-bold text-gray-900"[31m
+            [36m>[31m
+              [0mCompliance Banking[0m
+            [36m</h2>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 mt-1"[31m
+            [36m>[31m
+              [0mBank surplus credits and manage ship compliance balances.[0m
+            [36m</p>[31m
+          [36m</div>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"bg-blue-600 border border-transparent rounded-md py-2 px-4 shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"[31m
+          [36m>[31m
+            [0mTransfer Credits[0m
+          [36m</button>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"text-2xl"[31m
+            [36m>[31m
+              [0m≡ƒÜó[0m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+              [36m>[31m
+                [0mTotal Ships[0m
+              [36m</p>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-2xl font-semibold text-gray-900 mt-0.5"[31m
+              [36m>[31m
+                [0m2[0m
+              [36m</p>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"text-2xl"[31m
+            [36m>[31m
+              [0m≡ƒôê[0m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+              [36m>[31m
+                [0mSurplus Ships[0m
+              [36m</p>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-2xl font-semibold text-green-700 mt-0.5"[31m
+              [36m>[31m
+                [0m1[0m
+              [36m</p>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"text-2xl"[31m
+            [36m>[31m
+              [0mΓÜá∩╕Å[0m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+              [36m>[31m
+                [0mDeficit Ships[0m
+              [36m</p>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-2xl font-semibold text-red-700 mt-0.5"[31m
+              [36m>[31m
+                [0m1[0m
+              [36m</p>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-start gap-4 transition-all duration-150 hover:shadow-md"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"text-2xl"[31m
+            [36m>[31m
+              [0m≡ƒÅª[0m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500 font-medium"[31m
+              [36m>[31m
+                [0mTotal Fleet Credits[0m
+              [36m</p>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-2xl font-semibold text-blue-700 mt-0.5"[31m
+              [36m>[31m
+                [0m+88,90,44,000[0m
+              [36m</p>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white border border-gray-200 rounded-xl p-4 shadow-sm"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-wrap gap-4 items-end"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col gap-1.5 min-w-[160px]"[31m
+            [36m>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-xs font-semibold text-gray-500 uppercase tracking-wide"[31m
+                [33mfor[31m=[32m"bankingShipFilter"[31m
+              [36m>[31m
+                [0mShip ID[0m
+              [36m</label>[31m
+              [36m<select[31m
+                [33mclass[31m=[32m"border border-gray-300 bg-white text-gray-700 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-150"[31m
+                [33mid[31m=[32m"bankingShipFilter"[31m
+              [36m>[31m
+                [36m<option[31m
+                  [33mvalue[31m=[32m""[31m
+                [36m>[31m
+                  [0mAll Ships[0m
+                [36m</option>[31m
+                [36m<option[31m
+                  [33mvalue[31m=[32m"SHIP001"[31m
+                [36m>[31m
+                  [0mSHIP001[0m
+                [36m</option>[31m
+                [36m<option[31m
+                  [33mvalue[31m=[32m"SHIP002"[31m
+                [36m>[31m
+                  [0mSHIP002[0m
+                [36m</option>[31m
+              [36m</select>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col gap-1.5 min-w-[140px]"[31m
+            [36m>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-xs font-semibold text-gray-500 uppercase tracking-wide"[31m
+                [33mfor[31m=[32m"bankingStatusFilter"[31m
+              [36m>[31m
+                [0mStatus[0m
+              [36m</label>[31m
+              [36m<select[31m
+                [33mclass[31m=[32m"border border-gray-300 bg-white text-gray-700 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all d...[39m
+   [32mΓ£ô[39m BankingPage[2m > [22mshows KPI cards with correct ship counts[32m 29[2mms[22m[39m
+   [32mΓ£ô[39m BankingPage[2m > [22menables Transfer Credits button when both surplus and deficit exist[32m 48[2mms[22m[39m
+   [32mΓ£ô[39m BankingPage[2m > [22mshows filter panel with Ship ID, Status, and Year[32m 31[2mms[22m[39m
+   [32mΓ£ô[39m BankingPage[2m > [22mhandles API errors gracefully[32m 17[2mms[22m[39m
+ [31mΓ¥»[39m src/__tests__/RoutesPage.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1508[2mms[22m[39m
+   [32mΓ£ô[39m RoutesPage[2m > [22mfetches and renders routes data on load[32m 298[2mms[22m[39m
+   [32mΓ£ô[39m RoutesPage[2m > [22mshows ship-level KPI cards (unique ship count, not route count)[32m 84[2mms[22m[39m
+   [32mΓ£ô[39m RoutesPage[2m > [22mfilters data appropriately using dropdowns[32m 83[2mms[22m[39m
+[31m   [31m├ù[31m RoutesPage[2m > [22mhandles API errors gracefully[39m[33m 1039[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: /Failed to load routes/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"flex flex-col gap-6"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"[31m
+      [36m>[31m
+        [36m<div>[31m
+          [36m<h2[31m
+            [33mclass[31m=[32m"text-2xl font-semibold text-gray-900"[31m
+          [36m>[31m
+            [0mRoutes Dashboard[0m
+          [36m</h2>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-gray-500 mt-1"[31m
+          [36m>[31m
+            [0mMonitor and manage your maritime route compliance data.[0m
+          [36m</p>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex items-center gap-3"[31m
+        [36m>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"text-sm font-medium text-blue-600 hover:text-blue-800 transition-all duration-150"[31m
+          [36m>[31m
+            [0mRefresh Data[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 transition-all duration-150"[31m
+            [33mdisabled[31m=[32m""[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"h-4 w-4 mr-1.5"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-width[31m=[32m"1.5"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0mExport CSV[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-all duration-150"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"h-4 w-4 mr-1.5"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M12 4.5v15m7.5-7.5h-15"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0mAdd Route[0m
+          [36m</button>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"bg-red-50 border border-red-200 rounded-xl p-4"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex items-center gap-3"[31m
+        [36m>[31m
+          [36m<svg[31m
+            [33mclass[31m=[32m"h-5 w-5 text-red-500 flex-shrink-0"[31m
+            [33mfill[31m=[32m"currentColor"[31m
+            [33mviewBox[31m=[32m"0 0 20 20"[31m
+            [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+          [36m>[31m
+            [36m<path[31m
+              [33mclip-rule[31m=[32m"evenodd"[31m
+              [33md[31m=[32m"M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"[31m
+              [33mfill-rule[31m=[32m"evenodd"[31m
+            [36m/>[31m
+          [36m</svg>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-red-700 font-medium"[31m
+          [36m>[31m
+            [0mNetwork disconnected[0m
+          [36m</p>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"ml-auto text-sm font-medium text-red-600 hover:text-red-800 underline transition-all duration-150"[31m
+          [36m>[31m
+            [0mRetry[0m
+          [36m</button>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"overflow-x-auto"[31m
+        [36m>[31m
+          [36m<table[31m
+            [33mclass[31m=[32m"min-w-full divide-y divide-gray-200 text-sm"[31m
+          [36m>[31m
+            [36m<thead[31m
+              [33mclass[31m=[32m"bg-gray-50"[31m
+            [36m>[31m
+              [36m<tr>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mRoute ID[0m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mShip ID[0m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mVessel Type[0m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mFuel Type[0m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mYear[0m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mGHG Intensity [0m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                  [36m>[31m
+                    [0mΓåò[0m
+                  [36m</span>[31m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mFuel Cons. (t) [0m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                  [36m>[31m
+                    [0mΓåò[0m
+                  [36m</span>[31m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mDistance (nm) [0m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                  [36m>[31m
+                    [0mΓåò[0m
+                  [36m</span>[31m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mEmissions (tCOΓéée) [0m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                  [36m>[31m
+                    [0mΓåò[0m
+                  [36m</span>[31m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mCompliance Balance [0m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                  [36m>[31m
+                    [0mΓåò[0m
+                  [36m</span>[31m
+                [36m</th>[31m
+                [36m<th[31m
+                  [33mclass[31m=[32m"px-4 py-3.5 text-center text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                  [33mscope[31m=[32m"col"[31m
+                [36m>[31m
+                  [0mAction[0m
+                [36m</th>[31m
+              [36m</tr>[31m
+            [36m</thead>[31m
+            [36m<tbody[31m
+              [33mclass[31m=[32m"bg-white divide-y divide-gray-100"[31m
+            [36m>[31m
+              [36m<tr>[31m
+                [36m<td[31m
+                  [33mclass[31m=[32m"px-4 py-12 text-center text-gray-500"[31m
+                  [33mcolspan[31m=[32m"10"[31m
+                [36m>[31m
+                  [36m<div[31m
+                    [33mclass[31m=[32m"flex flex-col items-center gap-2"[31m
+                  [36m>[31m
+                    [36m<svg[31m
+                      [33mclass[31m=[32m"h-8 w-8 text-gray-300"[31m
+                      [33mfill[31m=[32m"none"[31m
+                      [33mstroke[31m=[32m"currentColor"[31m
+                      [33mstroke-width[31m=[32m"1.5"[31m
+                      [33mviewBox[31m=[32m"0 0 24 24"[31m
+                      [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                    [36m>[31m
+                      [36m<path[31m
+                        [33md[31m=[32m"M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"[31m
+                        [33mstroke-linecap[31m=[32m"round"[31m
+                        [33mstroke-linejoin[31m=[32m"round"[31m
+                      [36m/>[31m
+                    [36m</svg>[31m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"text-sm"[31m
+                    [36m>[31m
+                      [0mNo routes found matching the current filters.[0m
+                    [36m</span>[31m
+                  [36m</div>[31m
+                [36m</td>[31m
+              [36m</tr>[31m
+            [36m</tbody>[31m
+          [36m</table>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col gap-6"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"[31m
+        [36m>[31m
+          [36m<div>[31m
+            [36m<h2[31m
+              [33mclass[31m=[32m"text-2xl font-semibold text-gray-900"[31m
+            [36m>[31m
+              [0mRoutes Dashboard[0m
+            [36m</h2>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500 mt-1"[31m
+            [36m>[31m
+              [0mMonitor and manage your maritime route compliance data.[0m
+            [36m</p>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex items-center gap-3"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"text-sm font-medium text-blue-600 hover:text-blue-800 transition-all duration-150"[31m
+            [36m>[31m
+              [0mRefresh Data[0m
+            [36m</button>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 transition-all duration-150"[31m
+              [33mdisabled[31m=[32m""[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"h-4 w-4 mr-1.5"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-width[31m=[32m"1.5"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"[31m
+                  [33mstroke-linecap[31m=[32m"round"[31m
+                  [33mstroke-linejoin[31m=[32m"round"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0mExport CSV[0m
+            [36m</button>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-all duration-150"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"h-4 w-4 mr-1.5"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M12 4.5v15m7.5-7.5h-15"[31m
+                  [33mstroke-linecap[31m=[32m"round"[31m
+                  [33mstroke-linejoin[31m=[32m"round"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0mAdd Route[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-red-50 border border-red-200 rounded-xl p-4"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex items-center gap-3"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"h-5 w-5 text-red-500 flex-shrink-0"[31m
+              [33mfill[31m=[32m"currentColor"[31m
+              [33mviewBox[31m=[32m"0 0 20 20"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33mclip-rule[31m=[32m"evenodd"[31m
+                [33md[31m=[32m"M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"[31m
+                [33mfill-rule[31m=[32m"evenodd"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-red-700 font-medium"[31m
+            [36m>[31m
+              [0mNetwork disconnected[0m
+            [36m</p>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"ml-auto text-sm font-medium text-red-600 hover:text-red-800 underline transition-all duration-150"[31m
+            [36m>[31m
+              [0mRetry[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"overflow-x-auto"[31m
+          [36m>[31m
+            [36m<table[31m
+              [33mclass[31m=[32m"min-w-full divide-y divide-gray-200 text-sm"[31m
+            [36m>[31m
+              [36m<thead[31m
+                [33mclass[31m=[32m"bg-gray-50"[31m
+              [36m>[31m
+                [36m<tr>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mRoute ID[0m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mShip ID[0m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mVessel Type[0m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mFuel Type[0m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-left text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mYear[0m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mGHG Intensity [0m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                    [36m>[31m
+                      [0mΓåò[0m
+                    [36m</span>[31m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mFuel Cons. (t) [0m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                    [36m>[31m
+                      [0mΓåò[0m
+                    [36m</span>[31m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mDistance (nm) [0m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                    [36m>[31m
+                      [0mΓåò[0m
+                    [36m</span>[31m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mEmissions (tCOΓéée) [0m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                    [36m>[31m
+                      [0mΓåò[0m
+                    [36m</span>[31m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-right text-xs uppercase tracking-wider font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-all duration-150 group select-none"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mCompliance Balance [0m
+                    [36m<span[31m
+                      [33mclass[31m=[32m"ml-1 text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity"[31m
+                    [36m>[31m
+                      [0mΓåò[0m
+                    [36m</span>[31m
+                  [36m</th>[31m
+                  [36m<th[31m
+                    [33mclass[31m=[32m"px-4 py-3.5 text-center text-xs uppercase tracking-wider font-semibold text-gray-600"[31m
+                    [33mscope[31m=[32m"col"[31m
+                  [36m>[31m
+                    [0mAction[0m
+                  [36m</th>[31m
+                [36m</tr>[31m
+              [36m</thead>[31m
+              [36m<tbody[31m
+                [33mclass[31m=[32m"bg-white divide-y divide-gray-100"[31m
+              [36m>[31m
+                [36m<tr>[31m
+                  [36m<td[31m
+                    [33mclass[31m=[32m"px-4 py-12 text-center text-gray-500"[31m
+                    [33mcolspan[31m=[32m"10"[31m
+                  [36m>[31m
+                    [36m<div[31m
+                      [33mclass[31m=[32m"flex flex-col items-center gap-2"[31m
+                    [36m>[31m
+                      [36m<svg[31m
+                        [33mclass[31m=[32m"h-8 w-8 text-gray-300"[31m
+                        [33mfill[31m=[32m"none"[31m
+                        [33mstroke[31m=[32m"currentColor"[31m
+                        [33mstroke-width[31m=[32m"1.5"[31m
+                        [33mviewBox[31m=[32m"0 0 24 24"[31m
+                        [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                      [36m>[31m
+                        [36m<path[31m
+                          [33md[31m=[32m"M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"[31m
+                          [33mstroke-linecap[31m=[32m"round"[31m
+                          [33mstroke-linejoin[31m=[32m"round"[31m
+                        [36m/>[31m
+                      [36m</svg>[31m
+                      [36m<span[31m
+                        [33mclass[31m=[32m"text-sm"[31m
+                      [36m>[31m
+                        [0mNo routes found matching the current filters.[0m
+                      [36m</span>[31m
+                    [36m</div>[31m
+                  [36m</td>[31m
+                [36m</tr>[31m
+              [36m</tbody>[31m
+            [36m</table>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90mstderr[2m | src/__tests__/ComparePage.test.tsx[2m 
+> [22m[2mComparePage[2m > [22m[2mfetches and 
+processes comparison data correctly
+[22m[39mThe width(-1) and height(-1) of chart should be 
+greater than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater 
+than 0,
+       please check the style of container, or the props 
+width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or 
+use aspect(undefined) to control the
+       height and width.
+
+[90mstderr[2m | src/__tests__/TabLayout.test.tsx[2m > 
+[22m[2mTabLayout Navigation[2m > [22m[2mnavigates to 
+different route upon tab click
+[22m[39mError: Uncaught [Error: useRoutes must be used 
+within a RoutesProvider]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+Error: useRoutes must be used within a RoutesProvider
+    at useRoutes 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\context\RoutesContext.tsx:78:11[90m)[39m
+    at RoutesPage 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\RoutesPage.tsx:31:95[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+    at HTMLUnknownElementImpl._dispatch 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:233:9[90m)[39m
+Error: Uncaught [Error: useRoutes must be used within a 
+RoutesProvider]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+Error: useRoutes must be used within a RoutesProvider
+    at useRoutes 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\context\RoutesContext.tsx:78:11[90m)[39m
+    at RoutesPage 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\RoutesPage.tsx:31:95[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+    at HTMLUnknownElementImpl._dispatch 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:233:9[90m)[39m
+The above error occurred in the <RoutesPage> component:
+
+    at RoutesPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\RoutesPage.tsx:44:130)
+    at RenderedRoute (file:///C:/Users/vives/OneDrive/Desk
+top/full%20stack%20developer/Varuna/FuelEU-Maritime-Compli
+ance-Platform/frontend/node_modules/react-router/dist/deve
+lopment/chunk-LFPYN7LY.mjs:5905:26)
+    at Routes (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6723:3)
+    at main
+    at div
+    at TabLayout (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\shared\components\TabLayout.tsx:4:22)
+    at Router (file:///C:/Users/vives/OneDrive/Desktop/ful
+l%20stack%20developer/Varuna/FuelEU-Maritime-Compliance-Pl
+atform/frontend/node_modules/react-router/dist/development
+/chunk-LFPYN7LY.mjs:6653:13)
+    at MemoryRouter (file:///C:/Users/vives/OneDrive/Deskt
+op/full%20stack%20developer/Varuna/FuelEU-Maritime-Complia
+nce-Platform/frontend/node_modules/react-router/dist/devel
+opment/chunk-LFPYN7LY.mjs:6569:3)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [31mΓ¥»[39m src/__tests__/TabLayout.test.tsx [2m([22m[2m2 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 220[2mms[22m[39m
+   [32mΓ£ô[39m TabLayout Navigation[2m > [22mrenders all tab links[32m 161[2mms[22m[39m
+[31m   [31m├ù[31m TabLayout Navigation[2m > [22mnavigates to different route upon tab click[39m[32m 57[2mms[22m[39m
+[31m     ΓåÆ useRoutes must be used within a RoutesProvider[39m
+ [32mΓ£ô[39m src/__tests__/App.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 213[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/ComparePage.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 288[2mms[22m[39m
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mshows invalid pool 
+when total CB < 0
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mcreates pool and 
+updates cb_after values
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+[90mstderr[2m | src/__tests__/PoolingPage.test.tsx[2m 
+> [22m[2mPoolingPage[2m > [22m[2mhandles API errors 
+gracefully
+[22m[39mError: Uncaught [TypeError: Cannot read 
+properties of undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+Error: Uncaught [TypeError: Cannot read properties of 
+undefined (reading 'toLocaleString')]
+    at reportException 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js
+:66:24)
+    at innerInvokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9
+)
+    at invokeEventListeners 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3
+)
+    at HTMLUnknownElementImpl._dispatch 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9
+)
+    at HTMLUnknownElementImpl.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:1
+7)
+    at HTMLUnknownElement.dispatchEvent 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:4277:31)
+    at beginWork$1 (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\node_modules\react-dom\cjs\react-dom.development
+.js:27490:7)
+    at performUnitOfWork 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\node_modul
+es\react-dom\cjs\react-dom.development.js:26599:12) 
+TypeError: Cannot read properties of undefined (reading 
+'toLocaleString')
+    at [90mC:\Users\vives\OneDrive\Desktop\full stack dev
+eloper\Varuna\FuelEU-Maritime-Compliance-Platform\frontend
+\[39msrc\adapters\ui\PoolMemberList.tsx:34:34
+    at Array.map (<anonymous>)
+    at PoolMemberList 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+src\adapters\ui\PoolMemberList.tsx:28:23[90m)[39m
+    at renderWithHooks 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:15486:18[90m)[39m
+    at mountIndeterminateComponent 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:20103:13[90m)[39m
+    at beginWork 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:21626:16[90m)[39m
+    at HTMLUnknownElement.callCallback 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mreact-dom[24m\cjs\react-dom.development.
+js:4164:14[90m)[39m
+    at HTMLUnknownElement.callTheUserObjectsOperation 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\generated\Eve
+ntListener.js:26:30[90m)[39m
+    at innerInvokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:350:25[90m)[39m
+    at invokeEventListeners 
+[90m(C:\Users\vives\OneDrive\Desktop\full stack developer
+\Varuna\FuelEU-Maritime-Compliance-Platform\frontend\[39m
+node_modules\[4mjsdom[24m\lib\jsdom\living\events\EventT
+arget-impl.js:286:3[90m)[39m
+The above error occurred in the <PoolMemberList> 
+component:
+
+    at PoolMemberList 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\PoolMemberList.tsx:3:27)
+    at div
+    at PoolingPage (C:\Users\vives\OneDrive\Desktop\full 
+stack developer\Varuna\FuelEU-Maritime-Compliance-Platform
+\frontend\src\adapters\ui\PoolingPage.tsx:11:65)
+    at RoutesProvider 
+(C:\Users\vives\OneDrive\Desktop\full stack developer\Varu
+na\FuelEU-Maritime-Compliance-Platform\frontend\src\adapte
+rs\ui\context\RoutesContext.tsx:7:27)
+
+Consider adding an error boundary to your tree to 
+customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn 
+more about error boundaries.
+
+ [31mΓ¥»[39m src/__tests__/PoolingPage.test.tsx [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[33m 5109[2mms[22m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mloads and displays ship compliance data[39m[33m 1044[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Ship-A. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mshows valid pool when total CB >= 0[39m[33m 1013[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Valid Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mshows invalid pool when total CB < 0[39m[33m 1019[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Invalid Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mcreates pool and updates cb_after values[39m[33m 1017[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: Create Pool. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[31m   [31m├ù[31m PoolingPage[2m > [22mhandles API errors gracefully[39m[33m 1011[2mms[22m[39m
+[31m     ΓåÆ Unable to find an element with the text: /Server down/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Failed Tests 8 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/BankingPage.test.tsx[2m > 
+[22mBankingPage[2m > [22mloads and displays ship data 
+derived from routes
+[31m[1mTestingLibraryElementError[22m[39m: Found 
+multiple elements with the text: SHIP001
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<option[39m
+  [33mvalue[39m=[32m"SHIP001"[39m
+[36m>[39m
+  [0mSHIP001[0m
+[36m</option>[39m
+
+Ignored nodes: comments, script, style
+[36m<td[39m
+  [33mclass[39m=[32m"px-4 py-4 whitespace-nowrap 
+font-medium text-gray-900"[39m
+[36m>[39m
+  [0mSHIP001[0m
+[36m</td>[39m
+
+(If this is intentional, then use the `*AllBy*` variant 
+of the query (like `queryAllByText`, `getAllByText`, or 
+`findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flex flex-col gap-6"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flex items-center 
+justify-between"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"text-2xl font-bold 
+text-gray-900"[39m
+          [36m>[39m
+            [0mCompliance Banking[0m
+          [36m</h2>[39m
+          [36m<p[39m
+            [33mclass[39m=[32m"text-sm text-gray-500 
+mt-1"[39m
+          [36m>[39m
+            [0mBank surplus credits and manage ship 
+compliance balances.[0m
+          [36m</p>[39m
+        [36m</div>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"bg-blue-600 border 
+border-transparent rounded-md py-2 px-4 shadow-sm text-sm 
+font-medium text-white hover:bg-blue-700 
+focus:outline-none focus:ring-2 focus:ring-offset-2 
+focus:ring-blue-500 disabled:opacity-50 
+transition-colors"[39m
+        [36m>[39m
+          [0mTransfer Credits[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"grid grid-cols-1 
+md:grid-cols-2 lg:grid-cols-4 gap-6"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"text-2xl"[39m
+          [36m>[39m
+            [0m≡ƒÜó[0m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+font-medium"[39m
+            [36m>[39m
+              [0mTotal Ships[0m
+            [36m</p>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-2xl 
+font-semibold text-gray-900 mt-0.5"[39m
+            [36m>[39m
+              [0m2[0m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"text-2xl"[39m
+          [36m>[39m
+            [0m≡ƒôê[0m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+font-medium"[39m
+            [36m>[39m
+              [0mSurplus Ships[0m
+            [36m</p>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-2xl 
+font-semibold text-green-700 mt-0.5"[39m
+            [36m>[39m
+              [0m1[0m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"text-2xl"[39m
+          [36m>[39m
+            [0mΓÜá∩╕Å[0m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+font-medium"[39m
+            [36m>[39m
+              [0mDeficit Ships[0m
+            [36m</p>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-2xl 
+font-semibold text-red-700 mt-0.5"[39m
+            [36m>[39m
+              [0m1[0m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"text-2xl"[39m
+          [36m>[39m
+            [0m≡ƒÅª[0m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+font-medium"[39m
+            [36m>[39m
+              [0mTotal Fleet Credits[0m
+            [36m</p>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-2xl 
+font-semibold text-blue-700 mt-0.5"[39m
+            [36m>[39m
+              [0m+88,90,44,000[0m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"bg-white border 
+border-gray-200 rounded-xl p-4 shadow-sm"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex flex-wrap gap-4 
+items-end"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col gap-1.5 
+min-w-[160px]"[39m
+          [36m>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"text-xs font-semibold 
+text-gray-500 uppercase tracking-wide"[39m
+              [33mfor[39m=[32m"bankingShipFilter"[39m
+            [36m>[39m
+              [0mShip ID[0m
+            [36m</label>[39m
+            [36m<select[39m
+              [33mclass[39m=[32m"border 
+border-gray-300 bg-white text-gray-700 px-3 py-2 
+rounded-md focus:outline-none focus:ring-2 
+focus:ring-blue-500 focus:border-blue-500 text-sm 
+transition-all duration-150"[39m
+              [33mid[39m=[32m"bankingShipFilter"[39m
+            [36m>[39m
+              [36m<option[39m
+                [33mvalue[39m=[32m""[39m
+              [36m>[39m
+                [0mAll Ships[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mvalue[39m=[32m"SHIP001"[39m
+              [36m>[39m
+                [0mSHIP001[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mvalue[39m=[32m"SHIP002"[39m
+              [36m>[39m
+                [0mSHIP002[0m
+              [36m</option>[39m
+            [36m</select>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col gap-1.5 
+min-w-[140px]"[39m
+          [36m>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"text-xs font-semibold 
+text-gray-500 uppercase tracking-wide"[39m
+              
+[33mfor[39m=[32m"bankingStatusFilter"[39m
+            [36m>[39m
+              [0mStatus[0m
+            [36m</label>[39m
+            [36m<select[39m
+              [33mclass[39m=[32m"border 
+border-gray-300 bg-white text-gray-700 px-3 py-2 
+rounded-md focus:outline-none focus:ring-2 
+focus:ring-blue-500 focus:border-blue-500 text-sm 
+transition-all duration-150"[39m
+              [33mid[39m=[32m"bankingStatusFilter"[39m
+            [36m>[39m
+              [36m<option[39m
+                [33mvalue[39m=[32m""[39m
+              [36m>[39m
+                [0mAll[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mvalue[39m=[32m"Surplus"[39m
+          ...
+
+Ignored nodes: comments, script, style
+[36m<html>[39m
+  [36m<head />[39m
+  [36m<body>[39m
+    [36m<div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flex flex-col gap-6"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex items-center 
+justify-between"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<h2[39m
+              [33mclass[39m=[32m"text-2xl font-bold 
+text-gray-900"[39m
+            [36m>[39m
+              [0mCompliance Banking[0m
+            [36m</h2>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+mt-1"[39m
+            [36m>[39m
+              [0mBank surplus credits and manage ship 
+compliance balances.[0m
+            [36m</p>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"bg-blue-600 border 
+border-transparent rounded-md py-2 px-4 shadow-sm text-sm 
+font-medium text-white hover:bg-blue-700 
+focus:outline-none focus:ring-2 focus:ring-offset-2 
+focus:ring-blue-500 disabled:opacity-50 
+transition-colors"[39m
+          [36m>[39m
+            [0mTransfer Credits[0m
+          [36m</button>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"grid grid-cols-1 
+md:grid-cols-2 lg:grid-cols-4 gap-6"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"text-2xl"[39m
+            [36m>[39m
+              [0m≡ƒÜó[0m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-sm 
+text-gray-500 font-medium"[39m
+              [36m>[39m
+                [0mTotal Ships[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-2xl 
+font-semibold text-gray-900 mt-0.5"[39m
+              [36m>[39m
+                [0m2[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"text-2xl"[39m
+            [36m>[39m
+              [0m≡ƒôê[0m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-sm 
+text-gray-500 font-medium"[39m
+              [36m>[39m
+                [0mSurplus Ships[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-2xl 
+font-semibold text-green-700 mt-0.5"[39m
+              [36m>[39m
+                [0m1[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"text-2xl"[39m
+            [36m>[39m
+              [0mΓÜá∩╕Å[0m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-sm 
+text-gray-500 font-medium"[39m
+              [36m>[39m
+                [0mDeficit Ships[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-2xl 
+font-semibold text-red-700 mt-0.5"[39m
+              [36m>[39m
+                [0m1[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 p-5 flex items-start 
+gap-4 transition-all duration-150 hover:shadow-md"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"text-2xl"[39m
+            [36m>[39m
+              [0m≡ƒÅª[0m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-sm 
+text-gray-500 font-medium"[39m
+              [36m>[39m
+                [0mTotal Fleet Credits[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"text-2xl 
+font-semibold text-blue-700 mt-0.5"[39m
+              [36m>[39m
+                [0m+88,90,44,000[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white border 
+border-gray-200 rounded-xl p-4 shadow-sm"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-wrap gap-4 
+items-end"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex flex-col gap-1.5 
+min-w-[160px]"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"text-xs 
+font-semibold text-gray-500 uppercase tracking-wide"[39m
+                
+[33mfor[39m=[32m"bankingShipFilter"[39m
+              [36m>[39m
+                [0mShip ID[0m
+              [36m</label>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"border 
+border-gray-300 bg-white text-gray-700 px-3 py-2 
+rounded-md focus:outline-none focus:ring-2 
+focus:ring-blue-500 focus:border-blue-500 text-sm 
+transition-all duration-150"[39m
+                [33mid[39m=[32m"bankingShipFilter"[39m
+              [36m>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m""[39m
+                [36m>[39m
+                  [0mAll Ships[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"SHIP001"[39m
+                [36m>[39m
+                  [0mSHIP001[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"SHIP002"[39m
+                [36m>[39m
+                  [0mSHIP002[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex flex-col gap-1.5 
+min-w-[140px]"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"text-xs 
+font-semibold text-gray-500 uppercase tracking-wide"[39m
+                
+[33mfor[39m=[32m"bankingStatusFilter"[39m
+              [36m>[39m
+                [0mStatus[0m
+              [36m</label>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"border 
+border-gray-300 bg-white text-gray-700 px-3 py-2 
+rounded-md focus:outline-none focus:ring-2 
+focus:ring-blue-500 focus:border-blue-500 text-sm 
+transition-all d...
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/BankingPage.test.tsx:[2m53:11[22m[39m
+    [90m 51| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mBankingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 52| [39m
+    [90m 53| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 54| [39m      
+expect(screen.getByText('Compliance 
+Banking')).toBeInTheDocumentΓÇª
+    [90m 55| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'SHIP001'[39m))[33m.[39m[34m
+toBeInTheDocument[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mloads and displays ship 
+compliance data
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Ship-A. This could be because 
+the text is broken up by multiple elements. In this case, 
+you can provide a function for your text matcher to make 
+your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m46:11[22m[39m
+    [90m 44| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 45| [39m
+    [90m 46| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 47| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Ship-A'[39m))[33m.[39m[34mt
+oBeInTheDocument[39m()[33m;[39m
+    [90m 48| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Ship-B'[39m))[33m.[39m[34mt
+oBeInTheDocument[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mshows valid pool when total 
+CB >= 0
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Valid Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m60:11[22m[39m
+    [90m 58| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 59| [39m
+    [90m 60| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 61| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Valid Pool'[39m))[33m.[39m[
+34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 62| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create Pool'[39m))[33m.[39mn
+ot[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[3/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mshows invalid pool when total 
+CB < 0
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Invalid Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m77:11[22m[39m
+    [90m 75| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 76| [39m
+    [90m 77| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 78| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Invalid Pool'[39m))[33m.[39m
+[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 79| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create 
+Pool'[39m))[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[4/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mcreates pool and updates 
+cb_after values
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: Create Pool. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m91:11[22m[39m
+    [90m 89| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m 90| [39m
+    [90m 91| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m 92| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([32m'Create Pool'[39m))[33m.[39mn
+ot[33m.[39m[34mtoBeDisabled[39m()[33m;[39m
+    [90m 93| [39m    })[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[5/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/PoolingPage.test.tsx[2m > 
+[22mPoolingPage[2m > [22mhandles API errors gracefully
+[31m[1mTestingLibraryElementError[22m: Unable to find 
+an element with the text: /Server down/i. This could be 
+because the text is broken up by multiple elements. In 
+this case, you can provide a function for your text 
+matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div />[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div />[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/PoolingPage.test.tsx:[2m110:11[22m[39m
+    [90m108| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mPoolingPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m109| [39m
+    [90m110| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m111| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([36m/Server down/i[39m))[33m.[39m
+[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m112| [39m    })[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[6/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/RoutesPage.test.tsx[2m > 
+[22mRoutesPage[2m > [22mhandles API errors gracefully
+[31m[1mTestingLibraryElementError[22m[39m: Unable to 
+find an element with the text: /Failed to load routes/i. 
+This could be because the text is broken up by multiple 
+elements. In this case, you can provide a function for 
+your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flex flex-col gap-6"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flex flex-col sm:flex-row 
+justify-between items-start sm:items-center gap-4"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"text-2xl font-semibold 
+text-gray-900"[39m
+          [36m>[39m
+            [0mRoutes Dashboard[0m
+          [36m</h2>[39m
+          [36m<p[39m
+            [33mclass[39m=[32m"text-sm text-gray-500 
+mt-1"[39m
+          [36m>[39m
+            [0mMonitor and manage your maritime route 
+compliance data.[0m
+          [36m</p>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex items-center 
+gap-3"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"text-sm font-medium 
+text-blue-600 hover:text-blue-800 transition-all 
+duration-150"[39m
+          [36m>[39m
+            [0mRefresh Data[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"inline-flex 
+items-center px-3 py-2 border border-gray-300 rounded-md 
+text-sm font-medium text-gray-700 bg-white 
+hover:bg-gray-50 disabled:opacity-50 transition-all 
+duration-150"[39m
+            [33mdisabled[39m=[32m""[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"h-4 w-4 mr-1.5"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-width[39m=[32m"1.5"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M3 16.5v2.25A2.25 2.25 
+0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 
+16.5m0 0L7.5 12m4.5 4.5V3"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                
+[33mstroke-linejoin[39m=[32m"round"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0mExport CSV[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"inline-flex 
+items-center px-4 py-2 border border-transparent 
+rounded-md shadow-sm text-sm font-medium text-white 
+bg-blue-600 hover:bg-blue-700 transition-all 
+duration-150"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"h-4 w-4 mr-1.5"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-width[39m=[32m"2"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M12 
+4.5v15m7.5-7.5h-15"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                
+[33mstroke-linejoin[39m=[32m"round"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0mAdd Route[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"bg-red-50 border 
+border-red-200 rounded-xl p-4"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex items-center 
+gap-3"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33mclass[39m=[32m"h-5 w-5 text-red-500 
+flex-shrink-0"[39m
+            [33mfill[39m=[32m"currentColor"[39m
+            [33mviewBox[39m=[32m"0 0 20 20"[39m
+            
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33mclip-rule[39m=[32m"evenodd"[39m
+              [33md[39m=[32m"M10 18a8 8 0 100-16 8 8 0 
+000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 
+1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 
+001.414-1.414L11.414 10l1.293-1.293a1 1 0 
+00-1.414-1.414L10 8.586 8.707 7.293z"[39m
+              [33mfill-rule[39m=[32m"evenodd"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+          [36m<p[39m
+            [33mclass[39m=[32m"text-sm text-red-700 
+font-medium"[39m
+          [36m>[39m
+            [0mNetwork disconnected[0m
+          [36m</p>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"ml-auto text-sm 
+font-medium text-red-600 hover:text-red-800 underline 
+transition-all duration-150"[39m
+          [36m>[39m
+            [0mRetry[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 overflow-hidden"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"overflow-x-auto"[39m
+        [36m>[39m
+          [36m<table[39m
+            [33mclass[39m=[32m"min-w-full divide-y 
+divide-gray-200 text-sm"[39m
+          [36m>[39m
+            [36m<thead[39m
+              [33mclass[39m=[32m"bg-gray-50"[39m
+            [36m>[39m
+              [36m<tr>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mRoute ID[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mShip ID[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mVessel Type[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mFuel Type[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mYear[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mGHG Intensity [0m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                  [36m>[39m
+                    [0mΓåò[0m
+                  [36m</span>[39m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mFuel Cons. (t) [0m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                  [36m>[39m
+                    [0mΓåò[0m
+                  [36m</span>[39m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mDistance (nm) [0m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                  [36m>[39m
+                    [0mΓåò[0m
+                  [36m</span>[39m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mEmissions (tCOΓéée) [0m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                  [36m>[39m
+                    [0mΓåò[0m
+                  [36m</span>[39m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mCompliance Balance [0m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                  [36m>[39m
+                    [0mΓåò[0m
+                  [36m</span>[39m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"px-4 py-3.5 
+text-center text-xs uppercase tracking-wider 
+font-semibold text-gray-600"[39m
+                  [33mscope[39m=[32m"col"[39m
+                [36m>[39m
+                  [0mAction[0m
+                [36m</th>[39m
+              [36m</tr>[39m
+            [36m</thead>[39m
+            [36m<tbody[39m
+              [33mclass[39m=[32m"bg-white divide-y 
+divide-gray-100"[39m
+            [36m>[39m
+              [36m<tr>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"px-4 py-12 
+text-center text-gray-500"[39m
+                  [33mcolspan[39m=[32m"10"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"flex flex-col 
+items-center gap-2"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33mclass[39m=[32m"h-8 w-8 
+text-gray-300"[39m
+                      [33mfill[39m=[32m"none"[39m
+                      
+[33mstroke[39m=[32m"currentColor"[39m
+                      
+[33mstroke-width[39m=[32m"1.5"[39m
+                      [33mviewBox[39m=[32m"0 0 24 
+24"[39m
+                      
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M21 
+21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 
+0010.607 10.607z"[39m
+                        
+[33mstroke-linecap[39m=[32m"round"[39m
+                        
+[33mstroke-linejoin[39m=[32m"round"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"text-sm"[39m
+                    [36m>[39m
+                      [0mNo routes found matching the 
+current filters.[0m
+                    [36m</span>[39m
+                  [36m</div>[39m
+                [36m</td>[39m
+              [36m</tr>[39m
+            [36m</tbody>[39m
+          [36m</table>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<html>[39m
+  [36m<head />[39m
+  [36m<body>[39m
+    [36m<div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flex flex-col gap-6"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex flex-col sm:flex-row 
+justify-between items-start sm:items-center gap-4"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<h2[39m
+              [33mclass[39m=[32m"text-2xl 
+font-semibold text-gray-900"[39m
+            [36m>[39m
+              [0mRoutes Dashboard[0m
+            [36m</h2>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-gray-500 
+mt-1"[39m
+            [36m>[39m
+              [0mMonitor and manage your maritime route 
+compliance data.[0m
+            [36m</p>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex items-center 
+gap-3"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"text-sm font-medium 
+text-blue-600 hover:text-blue-800 transition-all 
+duration-150"[39m
+            [36m>[39m
+              [0mRefresh Data[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"inline-flex 
+items-center px-3 py-2 border border-gray-300 rounded-md 
+text-sm font-medium text-gray-700 bg-white 
+hover:bg-gray-50 disabled:opacity-50 transition-all 
+duration-150"[39m
+              [33mdisabled[39m=[32m""[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"h-4 w-4 mr-1.5"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-width[39m=[32m"1.5"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M3 16.5v2.25A2.25 
+2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 
+12L12 16.5m0 0L7.5 12m4.5 4.5V3"[39m
+                  
+[33mstroke-linecap[39m=[32m"round"[39m
+                  
+[33mstroke-linejoin[39m=[32m"round"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mExport CSV[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"inline-flex 
+items-center px-4 py-2 border border-transparent 
+rounded-md shadow-sm text-sm font-medium text-white 
+bg-blue-600 hover:bg-blue-700 transition-all 
+duration-150"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"h-4 w-4 mr-1.5"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 
+4.5v15m7.5-7.5h-15"[39m
+                  
+[33mstroke-linecap[39m=[32m"round"[39m
+                  
+[33mstroke-linejoin[39m=[32m"round"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mAdd Route[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-red-50 border 
+border-red-200 rounded-xl p-4"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex items-center 
+gap-3"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"h-5 w-5 text-red-500 
+flex-shrink-0"[39m
+              [33mfill[39m=[32m"currentColor"[39m
+              [33mviewBox[39m=[32m"0 0 20 20"[39m
+              
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclip-rule[39m=[32m"evenodd"[39m
+                [33md[39m=[32m"M10 18a8 8 0 100-16 8 8 
+0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 
+10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 
+1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 
+00-1.414-1.414L10 8.586 8.707 7.293z"[39m
+                [33mfill-rule[39m=[32m"evenodd"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"text-sm text-red-700 
+font-medium"[39m
+            [36m>[39m
+              [0mNetwork disconnected[0m
+            [36m</p>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"ml-auto text-sm 
+font-medium text-red-600 hover:text-red-800 underline 
+transition-all duration-150"[39m
+            [36m>[39m
+              [0mRetry[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-xl 
+shadow-sm border border-gray-200 overflow-hidden"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"overflow-x-auto"[39m
+          [36m>[39m
+            [36m<table[39m
+              [33mclass[39m=[32m"min-w-full divide-y 
+divide-gray-200 text-sm"[39m
+            [36m>[39m
+              [36m<thead[39m
+                [33mclass[39m=[32m"bg-gray-50"[39m
+              [36m>[39m
+                [36m<tr>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mRoute ID[0m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mShip ID[0m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mVessel Type[0m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mFuel Type[0m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-left text-xs uppercase tracking-wider font-semibold 
+text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mYear[0m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mGHG Intensity [0m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                    [36m>[39m
+                      [0mΓåò[0m
+                    [36m</span>[39m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mFuel Cons. (t) [0m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                    [36m>[39m
+                      [0mΓåò[0m
+                    [36m</span>[39m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mDistance (nm) [0m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                    [36m>[39m
+                      [0mΓåò[0m
+                    [36m</span>[39m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mEmissions (tCOΓéée) [0m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                    [36m>[39m
+                      [0mΓåò[0m
+                    [36m</span>[39m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-right text-xs uppercase tracking-wider font-semibold 
+text-gray-600 cursor-pointer hover:bg-gray-100 
+transition-all duration-150 group select-none"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mCompliance Balance [0m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"ml-1 
+text-gray-400 text-xs opacity-0 group-hover:opacity-100 
+transition-opacity"[39m
+                    [36m>[39m
+                      [0mΓåò[0m
+                    [36m</span>[39m
+                  [36m</th>[39m
+                  [36m<th[39m
+                    [33mclass[39m=[32m"px-4 py-3.5 
+text-center text-xs uppercase tracking-wider 
+font-semibold text-gray-600"[39m
+                    [33mscope[39m=[32m"col"[39m
+                  [36m>[39m
+                    [0mAction[0m
+                  [36m</th>[39m
+                [36m</tr>[39m
+              [36m</thead>[39m
+              [36m<tbody[39m
+                [33mclass[39m=[32m"bg-white divide-y 
+divide-gray-100"[39m
+              [36m>[39m
+                [36m<tr>[39m
+                  [36m<td[39m
+                    [33mclass[39m=[32m"px-4 py-12 
+text-center text-gray-500"[39m
+                    [33mcolspan[39m=[32m"10"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"flex flex-col 
+items-center gap-2"[39m
+                    [36m>[39m
+                      [36m<svg[39m
+                        [33mclass[39m=[32m"h-8 w-8 
+text-gray-300"[39m
+                        [33mfill[39m=[32m"none"[39m
+                        
+[33mstroke[39m=[32m"currentColor"[39m
+                        
+[33mstroke-width[39m=[32m"1.5"[39m
+                        [33mviewBox[39m=[32m"0 0 24 
+24"[39m
+                        
+[33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                      [36m>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"M21 
+21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 
+0010.607 10.607z"[39m
+                          
+[33mstroke-linecap[39m=[32m"round"[39m
+                          
+[33mstroke-linejoin[39m=[32m"round"[39m
+                        [36m/>[39m
+                      [36m</svg>[39m
+                      [36m<span[39m
+                        
+[33mclass[39m=[32m"text-sm"[39m
+                      [36m>[39m
+                        [0mNo routes found matching the 
+current filters.[0m
+                      [36m</span>[39m
+                    [36m</div>[39m
+                  [36m</td>[39m
+                [36m</tr>[39m
+              [36m</tbody>[39m
+            [36m</table>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</body>[39m
+[36m</html>[39m
+[90m [2mΓ¥»[22m Proxy.waitForWrapper node_modules/@test
+ing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2mΓ¥»[22m 
+src/__tests__/RoutesPage.test.tsx:[2m104:11[22m[39m
+    [90m102| [39m    [34mrenderWithProvider[39m([33m<
+[39m[33mRoutesPage[39m 
+[33m/[39m[33m>[39m)[33m;[39m
+    [90m103| [39m
+    [90m104| [39m    [35mawait[39m 
+[34mwaitFor[39m(() [33m=>[39m {
+    [90m   | [39m          [31m^[39m
+    [90m105| [39m      expect(screen.getByText(/Failed 
+to load routes/i)).toBeInTheDocuΓÇª
+    [90m106| [39m      [34mexpect[39m(screen[33m.[39
+m[34mgetByText[39m([36m/Retry/i[39m))[33m.[39m[34mt
+oBeInTheDocument[39m()[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[7/8]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/__tests__/TabLayout.test.tsx[2m > [22mTabLayout 
+Navigation[2m > [22mnavigates to different route upon 
+tab click
+[31m[1mError[22m: useRoutes must be used within a 
+RoutesProvider[39m
+[36m [2mΓ¥»[22m useRoutes src/adapters/ui/context/Route
+sContext.tsx:[2m78:11[22m[39m
+    [90m 76| [39m  [35mconst[39m context [33m=[39m 
+[34museContext[39m([33mRoutesContext[39m)[33m;[39m
+    [90m 77| [39m  [35mif[39m (context [33m===[39m 
+undefined) {
+    [90m 78| [39m    [35mthrow[39m [35mnew[39m 
+[33mError[39m([32m'useRoutes must be used within a 
+RoutesProvider'[39m)[33m;[39m
+    [90m   | [39m          [31m^[39m
+    [90m 79| [39m  }
+    [90m 80| [39m  [35mreturn[39m context[33m;[39m
+[90m [2mΓ¥»[22m RoutesPage 
+src/adapters/ui/RoutesPage.tsx:[2m31:95[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+[90m [2mΓ¥»[22m recoverFromConcurrentError node_modules
+/react-dom/cjs/react-dom.development.js:[2m25889:20[22m
+[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[8/8]ΓÄ»[22m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Unhandled Errors 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1m
+Vitest caught 5 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled 
+errors to make sure your tests are not affected.[22m[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mloads and displays ship compliance data[22m". It 
+might mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mshows valid pool when total CB >= 0[22m". It might 
+mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mshows invalid pool when total CB < 0[22m". It might 
+mean one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mcreates pool and updates cb_after values[22m". It 
+might mean one of the following:
+
+[2m Test Files [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m9 passed[39m[22m[90m (13)[39m
+[2m      Tests [22m [1m[31m8 failed[39m[22m[2m | [22m[1m[32m36 passed[39m[22m[90m (44)[39m
+[2m     Errors [22m [1m[31m5 errors[39m[22m
+[2m   Start at [22m 08:16:59
+[2m   Duration [22m 11.04s[2m (transform 3.66s, setup 10.34s, collect 16.49s, tests 9.61s, environment 34.82s, prepare 12.17s)[22m
+
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41m Uncaught Exception 
+[49m[22m[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1mTypeError[22m: Cannot read properties of 
+undefined (reading 'toLocaleString')[39m
+[36m [2mΓ¥»[22m 
+src/adapters/ui/PoolMemberList.tsx:[2m34:34[22m[39m
+    [90m 32| [39m                    m.cb_before > 0 ? 
+'text-green-600' : m.cb_before <ΓÇª
+    [90m 33| [39m                  
+[36m}[39m[32m`[39m[33m}[39m[33m>[39m
+    [90m 34| [39m                    [33m{[39mm[33m.
+[39mcb_before[33m.[39m[34mtoLocaleString[39m()[33m}[
+39m
+    [90m   | [39m                                 
+[31m^[39m
+    [90m 35| [39m                  
+[33m<[39m[33m/[39m[33mtd[39m[33m>[39m
+    [90m 36| [39m                  <td className={`px-6 
+py-4 whitespace-nowrap text-rigΓÇª
+[90m [2mΓ¥»[22m PoolMemberList 
+src/adapters/ui/PoolMemberList.tsx:[2m28:23[22m[39m
+[90m [2mΓ¥»[22m renderWithHooks node_modules/react-dom/
+cjs/react-dom.development.js:[2m15486:18[22m[39m
+[90m [2mΓ¥»[22m mountIndeterminateComponent node_module
+s/react-dom/cjs/react-dom.development.js:[2m20103:13[22m
+[39m
+[90m [2mΓ¥»[22m beginWork node_modules/react-dom/cjs/re
+act-dom.development.js:[2m21626:16[22m[39m
+[90m [2mΓ¥»[22m beginWork$1 node_modules/react-dom/cjs/
+react-dom.development.js:[2m27465:14[22m[39m
+[90m [2mΓ¥»[22m performUnitOfWork node_modules/react-do
+m/cjs/react-dom.development.js:[2m26599:12[22m[39m
+[90m [2mΓ¥»[22m workLoopSync node_modules/react-dom/cjs
+/react-dom.development.js:[2m26505:5[22m[39m
+[90m [2mΓ¥»[22m renderRootSync node_modules/react-dom/c
+js/react-dom.development.js:[2m26473:7[22m[39m
+
+[31mThis error originated in 
+"[1msrc/__tests__/PoolingPage.test.tsx[22m" test file. 
+It doesn't mean the error was thrown inside the file 
+itself, but while it was running.[39m
+[31mThe latest test that might've caused the error is 
+"[1mhandles API errors gracefully[22m". It might mean 
+one of the following:
+- The error was thrown, while Vitest was running this 
+test.
+- If the error occurred after the test had been 
+completed, this was the last documented test before it 
+was thrown.[39m
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+

@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { apiGet } from '../infrastructure/apiClient';
-import { Route } from '../../core/domain/Route';
+import React from 'react';
+import { useRoutes } from './context/RoutesContext';
 import { CompareDashboard } from './components/compare/CompareDashboard';
 import { useBaseline, BaselineProvider } from './context/BaselineContext';
 
@@ -30,60 +29,26 @@ const SkeletonTable: React.FC = () => (
 
 // Exported for testing purposes to bypass Context issues if needed
 export const ComparePageContent: React.FC = () => {
-  const [routes, setRoutes] = useState<Route[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  
+  const { routes, loading, error, fetchRoutes, selectedShipId } = useRoutes();
   const { baselineRouteId, setBaselineRouteId } = useBaseline();
-  
-  const isMounted = React.useRef(true);
 
+  // Set baseline from data when routes load
   React.useEffect(() => {
-    isMounted.current = true;
-    return () => {
-      isMounted.current = false;
-    };
-  }, []);
-
-  const fetchComparisonData = useCallback(async () => {
-    try {
-      if (!isMounted.current) return;
-      setLoading(true);
-      setError(null);
-      const res = await apiGet('/routes/comparison');
-      if (res.success && Array.isArray(res.data)) {
-        setRoutes(res.data);
-        const serverBaseline = res.data.find((r: any) => r.isBaseline);
-        if (serverBaseline) {
-          setBaselineRouteId(serverBaseline.routeId);
-        } else if (res.data.length > 0 && !baselineRouteId) {
-          setBaselineRouteId(res.data[0].routeId);
-        }
+    if (routes.length > 0 && !baselineRouteId) {
+      const serverBaseline = routes.find((r) => r.isBaseline);
+      if (serverBaseline) {
+        setBaselineRouteId(serverBaseline.routeId);
       } else {
-        throw new Error('Unable to load comparison data.');
-      }
-    } catch (err: any) {
-      if (!isMounted.current) return;
-      setError(err.message || 'Unable to load comparison data.');
-    } finally {
-      if (isMounted.current) {
-        setLoading(false);
+        setBaselineRouteId(routes[0].routeId);
       }
     }
-  }, [baselineRouteId, setBaselineRouteId]);
+  }, [routes, baselineRouteId, setBaselineRouteId]);
 
-  // Fetch on page load
-  useEffect(() => {
-    fetchComparisonData();
-  }, []);
-
-  // Refetch when baseline changes
-  useEffect(() => {
-    if (baselineRouteId && routes.length > 0) {
-      // Re-trigger data processing when baseline changes (no need to refetch API unless needed)
-      // The comparison recalculation happens in CompareDashboard via useMemo
-    }
-  }, [baselineRouteId]);
+  // Apply global ship filter
+  const filteredRoutes = React.useMemo(() => {
+    if (!selectedShipId) return routes;
+    return routes.filter((r) => r.shipId === selectedShipId);
+  }, [routes, selectedShipId]);
 
   return (
     <div className="flex flex-col gap-6 w-full pb-10 max-w-7xl mx-auto px-6 py-6">
@@ -95,7 +60,7 @@ export const ComparePageContent: React.FC = () => {
         </div>
         <div className="flex items-center gap-3">
           <button
-            onClick={fetchComparisonData}
+            onClick={fetchRoutes}
             className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
             disabled={loading}
           >
@@ -124,7 +89,7 @@ export const ComparePageContent: React.FC = () => {
           <SkeletonTable />
         </div>
       ) : (
-        <CompareDashboard routes={routes} />
+        <CompareDashboard routes={filteredRoutes} />
       )}
     </div>
   );
@@ -137,4 +102,3 @@ export const ComparePage: React.FC = () => {
     </BaselineProvider>
   );
 };
-

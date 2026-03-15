@@ -15,6 +15,7 @@ describe('Routes API', () => {
     expect(Array.isArray(res.body.data)).toBe(true);
     expect(res.body.data.length).toBe(5);
     expect(res.body.data[0]).toHaveProperty('routeId');
+    expect(res.body.data[0]).toHaveProperty('shipId');
     expect(res.body.data[0]).toHaveProperty('vesselType');
     expect(res.body.data[0]).toHaveProperty('fuelType');
   });

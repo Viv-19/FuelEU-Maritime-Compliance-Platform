@@ -2,6 +2,7 @@ import React from 'react';
 
 export interface CompareFilterState {
   search: string;
+  shipId: string;
   vesselType: string;
   fuelType: string;
   year: number | '';
@@ -12,6 +13,7 @@ export interface CompareFilterState {
 interface CompareFiltersProps {
   filters: CompareFilterState;
   setFilters: React.Dispatch<React.SetStateAction<CompareFilterState>>;
+  shipIds: string[];
   vesselTypes: string[];
   fuelTypes: string[];
   years: number[];
@@ -20,6 +22,7 @@ interface CompareFiltersProps {
 export const CompareFilters: React.FC<CompareFiltersProps> = ({
   filters,
   setFilters,
+  shipIds,
   vesselTypes,
   fuelTypes,
   years,
@@ -30,7 +33,7 @@ export const CompareFilters: React.FC<CompareFiltersProps> = ({
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm mb-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4">
         {/* Search Route ID */}
         <div>
           <label className="block text-xs font-medium text-gray-700 mb-1">Route ID</label>
@@ -41,6 +44,23 @@ export const CompareFilters: React.FC<CompareFiltersProps> = ({
             onChange={(e) => handleChange('search', e.target.value)}
             className="w-full pl-3 pr-3 py-2 text-sm bg-white text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
+        </div>
+
+        {/* Ship ID */}
+        <div>
+          <label className="block text-xs font-medium text-gray-700 mb-1">Ship ID</label>
+          <select
+            value={filters.shipId}
+            onChange={(e) => handleChange('shipId', e.target.value)}
+            className="w-full pl-3 pr-8 py-2 text-sm bg-white text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="">All Ships</option>
+            {shipIds.map((id) => (
+              <option key={id} value={id}>
+                {id}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Vessel Type */}

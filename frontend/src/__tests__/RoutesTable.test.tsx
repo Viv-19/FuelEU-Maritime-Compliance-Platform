@@ -6,6 +6,7 @@ import { Route } from '../core/domain/Route';
 const mockRoutes: Route[] = [
   {
     routeId: 'R001',
+    shipId: 'SHIP001',
     vesselType: 'Container',
     fuelType: 'HFO',
     year: 2024,
@@ -17,6 +18,7 @@ const mockRoutes: Route[] = [
   },
   {
     routeId: 'R002',
+    shipId: 'SHIP002',
     vesselType: 'BulkCarrier',
     fuelType: 'LNG',
     year: 2024,

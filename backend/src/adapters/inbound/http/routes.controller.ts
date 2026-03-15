@@ -55,6 +55,7 @@ export const getComparison = async (_req: Request, res: Response): Promise<void>
     const routes = await getAllRoutesUseCase.execute();
     const data = routes.map((route: Route) => ({
       routeId: route.routeId,
+      shipId: route.shipId,
       vesselType: route.vesselType,
       fuelType: route.fuelType,
       year: route.year,
@@ -77,6 +78,7 @@ export const getComparison = async (_req: Request, res: Response): Promise<void>
 export const addRoute = async (req: Request, res: Response): Promise<void> => {
   const routeSchema = z.object({
     routeId: z.string().min(1),
+    shipId: z.string().min(1),
     vesselType: z.enum(['Container', 'BulkCarrier', 'Tanker', 'RoRo']),
     fuelType: z.enum(['HFO', 'LNG', 'MGO', 'VLSFO']),
     year: z.number().int().min(2000),
@@ -99,6 +101,7 @@ export const addRoute = async (req: Request, res: Response): Promise<void> => {
   try {
     const newRoute = await createRouteUseCase.execute({
       routeId: parsed.data.routeId,
+      shipId: parsed.data.shipId,
       vesselType: parsed.data.vesselType,
       fuelType: parsed.data.fuelType,
       year: parsed.data.year,
