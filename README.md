@@ -15,6 +15,16 @@ The FuelEU Maritime regulation mandates that ships operating in EU waters progre
 | **Banking** | Bank surplus Compliance Balance (CB > 0) for future use, or apply banked surplus to offset deficits (Article 20) |
 | **Pooling** | Form compliance pools across ships so surplus ships offset deficit ships (Article 21) |
 
+### Platform Previews
+
+<div align="center">
+  <img src="./image.png" alt="Platform Preview 1" width="800"/>
+  <br/><br/>
+  <img src="./image-1.png" alt="Platform Preview 2" width="800"/>
+  <br/><br/>
+  <img src="./image-2.png" alt="Platform Preview 3" width="800"/>
+</div>
+
 ---
 
 ## Architecture
